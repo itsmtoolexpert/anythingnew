@@ -31,7 +31,7 @@ _Last updated: Sun 2026-11-01 (test run 2, research-only format)._
 ## Content Backlog
 - 2026-11-01: LinkedIn — "The AIOps moat is telemetry, not the model" (Theme 2, Galloway-style contrarian). Status: suggested.
 - 2026-11-01: Substack — "The Agent Governance Stack" (Theme 1). Status: suggested.
-- 2026-11-01: LinkedIn — "Who approves your AI agent?" (Theme 1) with dynamic diagram chief-of-staff/visuals/2026-11-01-agent-control-plane.mp4. Status: recommended for Mon 11-02.
+- 2026-11-01: LinkedIn — "Who approves your AI agent?" (Theme 1) with dynamic diagram chief-of-staff/visuals/2026-11-01-agent-control-plane.mp4. Status: drafted (chief-of-staff/drafts/2026-11-02-linkedin-who-approves-your-ai-agent.md), not yet published.
 - 2026-11-01: One-page — "Agent Control Plane Scorecard" grid (vendors x layers). Status: suggested.
 - 2026-11-01: Visual — one-page map of where observability vendors plug into the AI agent lifecycle (Bhatia-style). Status: suggested.
 
