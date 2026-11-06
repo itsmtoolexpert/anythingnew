@@ -42,15 +42,19 @@ _Last updated: Fri 2026-11-06 (evening run)._
 - 2026-11-01: LinkedIn — "The AIOps moat is telemetry, not the model" (Theme 2, Galloway-style contrarian). Status: suggested.
 - 2026-11-01: Substack — "The Agent Control Plane" (Theme 1). Status: drafted (chief-of-staff/drafts/2026-11-substack-the-agent-control-plane.md), not yet published.
 - 2026-11-01: LinkedIn — "Who approves your AI agent?" (Theme 1) with dynamic diagram chief-of-staff/visuals/2026-11-01-agent-control-plane.mp4. Status: drafted (chief-of-staff/drafts/2026-11-02-linkedin-who-approves-your-ai-agent.md), not yet published.
-- 2026-11-01: One-page — "Agent Control Plane Scorecard" grid (vendors x layers). Status: suggested.
+- 2026-11-01: One-page — "Agent Control Plane Scorecard" grid (vendors x layers: identity, policy, trace, enforcement/kill, standards). Status: suggested. (Merged with the 2026-11-04 "Who owns each layer of the agent control loop" grid, same idea.)
 - 2026-11-01: Visual — one-page map of where observability vendors plug into the AI agent lifecycle (Bhatia-style). Status: suggested.
 
-- 2026-11-04: LinkedIn — "Security vendors are buying the agent trace" (Theme 1, Galloway-style contrarian) with diagram chief-of-staff/visuals/2026-11-04-who-owns-the-trace.mp4. Status: suggested.
-- 2026-11-04: One-page — "Who owns each layer of the agent control loop" grid. Status: suggested.
 
 - 2026-11-05: LinkedIn — "Four layers, one loop: identity, policy, trace, kill" (Theme 1, Bhatia-style one-page visual) with diagram chief-of-staff/visuals/2026-11-05-identity-policy-trace-kill.mp4. Status: suggested.
 
-- 2026-11-06: LinkedIn — "Three buyers, one asset: the agent trace" (Theme 1, Galloway-style, timeline) with diagram chief-of-staff/visuals/2026-11-06-agent-trace-buyers.mp4. Status: suggested (overlaps Nov 4 angle; use only if Nov 4 post stays unwritten).
+- 2026-11-04 (merged 11-06): LinkedIn — "Security vendors are buying the agent trace" / "Three buyers, one asset" (Theme 1, Galloway-style contrarian, timeline) with diagram chief-of-staff/visuals/2026-11-06-agent-trace-buyers.mp4. Status: suggested.
+
+## Visuals
+- 2026-11-01 · agent-control-plane · Theme 1 · 6-step flow: request, identity, policy, enforcement, tools, production + observability feedback loop · updated 2026-11-01 · used by: LinkedIn "Who approves your AI agent?" (drafted), Substack "The Agent Control Plane" (drafted).
+- 2026-11-05 · identity-policy-trace-kill · Theme 1 · 4-step loop: identity, policy, trace, kill · updated 2026-11-05 · used by: LinkedIn "Four layers, one loop". Supersedes 2026-11-04 who-owns-the-trace (same loop, fewer layers; deleted 2026-11-06 during dedup).
+- 2026-11-06 · agent-trace-buyers · Theme 1 · acquisition timeline: Palo Alto–Chronosphere, Cisco–Galileo, CrowdStrike–Fiddler · updated 2026-11-06 · used by: LinkedIn "Security vendors are buying the agent trace".
+- Note: files dated 2026-11-04/05/06 were named with the UTC date; the runs happened on 11-03/04/05 Mountain Time. New files use the Mountain Time date.
 
 ## Content Log
 - (nothing recorded yet — tell me what you publish)
@@ -70,4 +74,5 @@ _Last updated: Fri 2026-11-06 (evening run)._
 - 2026-11-01: Frontier-AI news searches return many aggregator/newsletter pages with conflicting dates. Prefer company blogs and named trade press.
 - 2026-11-04: Web search returns mostly stale results; adding explicit date strings (e.g. "November 3, 2026") surfaced fresh stories. WebFetch hosts (techcrunch, benzinga, techtarget) are blocked in this environment: snippets only. Substack 'Agent Control Plane' and LinkedIn drafts still unpublished 3 days on (pattern: drafts pile up, nothing logged as published).
 - 2026-11-05: Thin news day; vendor-specific searches returned nothing dated Nov 4-5 for ITSM/EA. WebFetch blocked for investors.datadoghq.com and aiagentsdirectory.com. Drafts still unpublished 4 days; Content Log empty.
+- 2026-11-06 (dedup): Three quiet days in a row produced three near-identical Theme 1 diagrams (11-04 and 11-05 were the same loop). Rule added: update or reuse an existing diagram instead of drawing a new one for the same theme and structure.
 - 2026-11-06: Quiet day again (3rd in a row). WebFetch blocked for itpro.com. Drafts unpublished 5 days; Content Log empty. LinkedIn gap flagged.

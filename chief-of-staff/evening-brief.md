@@ -111,15 +111,20 @@ One idea that deserves depth:
 - **Readiness**: "ready to draft" (enough evidence), or "needs N more data points" (and what to look for).
 
 ### Dynamic Diagram (required every run)
-Build an animated diagram that explains The Story visually: a flow, a stack, a before/after or a lifecycle, with motion that shows how something moves through it (a token travelling along the path, stages lighting up in sequence, a feedback loop). This is mandatory; never skip it.
+Build an animated diagram that explains The Story visually: a flow, a stack, a before/after or a lifecycle, with motion that shows how something moves through it (a token travelling along the path, stages lighting up in sequence, a feedback loop). Every brief must include a dynamic diagram; never skip the section.
+
+Avoid duplicates. Before drawing, check the Visuals section of memory.md:
+- If an existing diagram from the last 30 days already covers the same theme with the same structure (same layers or steps), do not create a new file. Either reuse it as is, or, if today's news adds something, update that diagram in place: edit its SVG, keep its filename, re-export its MP4 and PNG over the old ones, and add "updated YYYY-MM-DD" to the footer.
+- Create a new diagram only when the structure or angle is genuinely different (for example a timeline instead of a flow, or a different theme).
+- In the brief, say which case applied: new, updated, or reused (with the existing file path).
 
 Specs:
 - A single self-contained SVG file with CSS and/or SMIL animation. No external fonts, images or scripts. Canvas 1080x1350 (LinkedIn 4:5 portrait). Loop length 8-12 seconds.
 - A light background with dark text, readable on a phone: titles at least 44px, body text at least 20px. Use real vendor and product names from the Signal Scan. Every claim on the diagram must come from a linked source in the brief.
 - A title, a one-line thesis at the bottom, and a footer: "Emerging Things · Rahul Adokar".
-- Save it as chief-of-staff/visuals/YYYY-MM-DD-<short-slug>.svg.
+- Save a new diagram as chief-of-staff/visuals/YYYY-MM-DD-<short-slug>.svg, where the date is today's date in Mountain Time (run `TZ=America/Denver date +%F`), never the UTC date.
 - Then export an MP4 of one full loop for LinkedIn: open the SVG in Chromium with Playwright at 1080x1350 with video recording on, wait one loop, then convert the recording to MP4 (H.264, yuv420p) with ffmpeg. Save it next to the SVG with the same name and an .mp4 extension. Also save a PNG frame from the middle of the loop with the same name. If the export fails, say so in the brief; the SVG is still required.
-- Commit and push the visuals together with memory.md.
+- Commit and push the visuals together with memory.md. Only commit visuals that are new or changed in this run, and record each one in the Visuals section of memory.md.
 
 In the brief, give the file paths, a one-line caption for the post, and a one-line description of what moves.
 
@@ -139,9 +144,10 @@ At the end of each run, write to chief-of-staff/memory.md, creating it if needed
 
 Keep these sections in memory.md:
 - Narrative Tracker: each theme with its thesis, dated data points (with links), status (building, Substack-ready, published, fading).
-- Content Backlog: LinkedIn and Substack ideas suggested but not yet written, each with the date it was added.
+- Content Backlog: LinkedIn and Substack ideas suggested but not yet written, each with the date it was added. Before adding an idea, check for an existing item with the same theme and angle; if one exists, update that item instead of adding a near-duplicate.
 - Content Log: what I published and when, from what I tell you. Use it to track posting rhythm and to avoid repeating an angle.
 - Stories Covered: headlines already featured in Signal Scan, so the same story isn't repeated unless there's a new development.
+- Visuals: one line per diagram file set: date, slug, theme, structure (for example "4-step loop: identity, policy, trace, kill"), last updated, and which backlog items use it. Check it before drawing (see Dynamic Diagram).
 - Patterns: week-over-week observations, such as which themes I keep flagging without writing about, which formats seem to work, and which sources are reliable or not.
 
 At the start of each run, read memory.md before writing the brief. If the Content Log shows no LinkedIn post in 3+ weekdays, or no Substack issue in 10+ days, say so once in the Headline. If a pattern has shown up for 3+ weeks, mention it once. Don't nag.
