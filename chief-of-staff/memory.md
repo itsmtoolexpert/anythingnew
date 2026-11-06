@@ -1,12 +1,12 @@
 # Research Memory — Emerging Things
 
-_Last updated: Thu 2026-11-05 (evening run)._
+_Last updated: Fri 2026-11-06 (evening run)._
 
 ## Narrative Tracker
 
 ### Theme 1: The agent governance stack is forming
 - **Thesis:** Control over what IT agents may do is being split across ITSM (policy), observability (tracing) and silicon/runtime (enforcement). Whoever owns the policy layer owns the agent.
-- **Status:** 📈 Substack-ready (10 data points)
+- **Status:** 📈 Substack-ready (12 data points)
 - **Data points:**
   - 2026-10-21: ServiceNow AI Passport with NVIDIA, policy from AI Control Tower enforced at runtime. https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-delivers-industry-first-personal-enterprise-agent-and-policy-enforcement-with-NVIDIA-extending-AI-governance-across-software-and-silicon/default.aspx
   - 2026-10-28: Digitate ignio Hummingbird, built-in MCP and A2A servers for IT ops agents. https://www.tmcnet.com/usubmit/2026/10/28/10471511.htm
@@ -17,6 +17,10 @@ _Last updated: Thu 2026-11-05 (evening run)._
   - 2026-11 (CrowdStrike Fal.Con Europe): AI Kill Switch to terminate rogue agents and cut network access. https://cryptobriefing.com/crowdstrike-unveils-ai-kill-switch-to-rein-in-rogue-agents (aggregator-grade, unverified date)
   - 2026-11 (NIST blog, ~Nov 4 per aggregator ID Tech Digest, date unverified): NIST proposes 10 design tenets for AI agent identity management (agents as distinct identity principals). https://nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems
   - 2026-11-04: CrowdStrike AI Kill Switch in Falcon Guardian (second source via aggregator search; still not primary-confirmed).
+  - 2026-04 (context): Cisco announces intent to acquire Galileo (AI agent observability); Futurum frames it as pressure on Datadog/Dynatrace. https://futurumgroup.com/insights/cisco-to-acquire-galileo-ai-agent-observability-cant-run-at-human-speed/
+  - 2026-09-15 (context): Cisco Splunk Agent Observability + Tokenomics (token spend per agent/coding agent). https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m09/cisco-delivers-trusted-ai-at-scale-through-new-splunk-advancements.html
+  - 2025-11 (context, date approximate): Palo Alto Networks to acquire Chronosphere, $3.35B. https://msp-channel.com/news/71188/palo-alto-networks-acquires-chronosphere-to-boost-ai-observability-and-security
+  - 2026-10-20 (context): Grafana Agent Observability (OTel) GA + Assistant Watchers. https://grafana.com/press/2026/10/20/observabilitycon-2026-ai-updates/
   - Context (2026-05-05): Microsoft Agent 365 GA (May 1) and Google AI control center; analysts say single-vendor consoles won't cover multi-cloud agents. https://www.computerworld.com/article/4167054/microsoft-google-push-ai-agent-governance-into-enterprise-it-mainstream.html
   - Supporting stat (date ~2026-10-27): Splunk State of Observability 2026, 83% concerned about unintended consequences of AI agents. https://tahawultech.com/industry/technology/splunk-state-of-observability-2026-report-avoiding-the-hidden-costs-of-ai-agents
 
@@ -46,6 +50,8 @@ _Last updated: Thu 2026-11-05 (evening run)._
 
 - 2026-11-05: LinkedIn — "Four layers, one loop: identity, policy, trace, kill" (Theme 1, Bhatia-style one-page visual) with diagram chief-of-staff/visuals/2026-11-05-identity-policy-trace-kill.mp4. Status: suggested.
 
+- 2026-11-06: LinkedIn — "Three buyers, one asset: the agent trace" (Theme 1, Galloway-style, timeline) with diagram chief-of-staff/visuals/2026-11-06-agent-trace-buyers.mp4. Status: suggested (overlaps Nov 4 angle; use only if Nov 4 post stays unwritten).
+
 ## Content Log
 - (nothing recorded yet — tell me what you publish)
 
@@ -57,8 +63,11 @@ _Last updated: Thu 2026-11-05 (evening run)._
 
 - 2026-11-05: NIST agent identity tenets; Datadog Q3 (Nov 4); CrowdStrike kill switch (repeat, new corroboration); Rapid7 Q3, Meta-Conductor (aggregator only, not featured).
 
+- 2026-11-06: Thin day, no verified stories dated Nov 4-6 beyond already covered. Re-surfaced Cisco-Galileo, Grafana GA, Palo Alto-Chronosphere as context only.
+
 ## Patterns
 - 2026-11-01: Weekend runs have little fresh news; Sunday is best used to deepen a theme rather than scan.
 - 2026-11-01: Frontier-AI news searches return many aggregator/newsletter pages with conflicting dates. Prefer company blogs and named trade press.
 - 2026-11-04: Web search returns mostly stale results; adding explicit date strings (e.g. "November 3, 2026") surfaced fresh stories. WebFetch hosts (techcrunch, benzinga, techtarget) are blocked in this environment: snippets only. Substack 'Agent Control Plane' and LinkedIn drafts still unpublished 3 days on (pattern: drafts pile up, nothing logged as published).
 - 2026-11-05: Thin news day; vendor-specific searches returned nothing dated Nov 4-5 for ITSM/EA. WebFetch blocked for investors.datadoghq.com and aiagentsdirectory.com. Drafts still unpublished 4 days; Content Log empty.
+- 2026-11-06: Quiet day again (3rd in a row). WebFetch blocked for itpro.com. Drafts unpublished 5 days; Content Log empty. LinkedIn gap flagged.
