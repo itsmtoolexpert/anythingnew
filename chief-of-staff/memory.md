@@ -1,0 +1,81 @@
+# Research Memory — Emerging Things
+
+_Last updated: Fri 2026-11-06 (evening run 2, MT)._
+
+## Narrative Tracker
+
+### Theme 1: The agent governance stack is forming
+- **Thesis:** Control over what IT agents may do is being split across ITSM (policy), observability (tracing) and silicon/runtime (enforcement). Whoever owns the policy layer owns the agent.
+- **Status:** 📈 Substack-ready (12 data points)
+- **Data points:**
+  - 2026-10-21: ServiceNow AI Passport with NVIDIA, policy from AI Control Tower enforced at runtime. https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-delivers-industry-first-personal-enterprise-agent-and-policy-enforcement-with-NVIDIA-extending-AI-governance-across-software-and-silicon/default.aspx
+  - 2026-10-28: Digitate ignio Hummingbird, built-in MCP and A2A servers for IT ops agents. https://www.tmcnet.com/usubmit/2026/10/28/10471511.htm
+  - 2026-10-30: Dynatrace unifies AI observability ingest for coding agents, Claude Managed Agents, OpenInference; drops OpenLLMetry. https://dynatrace.com/news/blog/dynatrace-unifies-ai-observability-ingest-across-coding-agents-oneagent-and-openinference
+  - 2026-10-22: Agentic AI Foundation takes Anthropic Agent Skills, OpenAI Open Responses, OpenEnv, OpenSandbox; joins MCP, A2A, AGENTS.md under vendor-neutral governance. https://www.linuxfoundation.org/press/agentic-ai-foundation-announces-four-new-projects-agent-skills-open-responses-openenv-and-opensandbox
+  - 2026-10-28: OutSystems survey: gap between confidence in governing agents and operational readiness (via SecurityBrief). https://securitybrief.asia/story/outsystems-survey-finds-ai-governance-gap-in-firms
+  - 2026-11-03: CrowdStrike to acquire Fiddler AI (agent observability: tracing reasoning/tool calls, drift) and Dreadnode; WSJ-reported ~$495M combined, terms not disclosed by CrowdStrike. https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-fiddler-to-deliver-agent-observability/ ; https://techcrunch.com/2026/11/03/crowdstrike-to-shell-out-nearly-500m-for-2-ai-security-startups-as-the-market-for-securing-agents-takes-off
+  - 2026-11 (CrowdStrike Fal.Con Europe): AI Kill Switch to terminate rogue agents and cut network access. https://cryptobriefing.com/crowdstrike-unveils-ai-kill-switch-to-rein-in-rogue-agents (aggregator-grade, unverified date)
+  - 2026-11 (NIST blog, ~Nov 4 per aggregator ID Tech Digest, date unverified): NIST proposes 10 design tenets for AI agent identity management (agents as distinct identity principals). https://nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems
+  - 2026-11-04: CrowdStrike AI Kill Switch in Falcon Guardian (second source via aggregator search; still not primary-confirmed).
+  - 2026-04 (context): Cisco announces intent to acquire Galileo (AI agent observability); Futurum frames it as pressure on Datadog/Dynatrace. https://futurumgroup.com/insights/cisco-to-acquire-galileo-ai-agent-observability-cant-run-at-human-speed/
+  - 2026-09-15 (context): Cisco Splunk Agent Observability + Tokenomics (token spend per agent/coding agent). https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m09/cisco-delivers-trusted-ai-at-scale-through-new-splunk-advancements.html
+  - 2025-11 (context, date approximate): Palo Alto Networks to acquire Chronosphere, $3.35B. https://msp-channel.com/news/71188/palo-alto-networks-acquires-chronosphere-to-boost-ai-observability-and-security
+  - 2026-10-20 (context): Grafana Agent Observability (OTel) GA + Assistant Watchers. https://grafana.com/press/2026/10/20/observabilitycon-2026-ai-updates/
+  - Context (2026-05-05): Microsoft Agent 365 GA (May 1) and Google AI control center; analysts say single-vendor consoles won't cover multi-cloud agents. https://www.computerworld.com/article/4167054/microsoft-google-push-ai-agent-governance-into-enterprise-it-mainstream.html
+  - Supporting stat (date ~2026-10-27): Splunk State of Observability 2026, 83% concerned about unintended consequences of AI agents. https://tahawultech.com/industry/technology/splunk-state-of-observability-2026-report-avoiding-the-hidden-costs-of-ai-agents
+
+### Theme 2: In AIOps, the model is a commodity and telemetry is the moat
+- **Thesis:** Observability vendors are shipping small in-house models; advantage comes from proprietary telemetry, not model quality.
+- **Status:** building (3 data points)
+- **Data points:**
+  - 2026-11-04: Dynatrace Q2 FY27 call: 1,100+ customers in agents public preview (up from 800), monetizing agents from Q3 (per Benzinga transcript; page not fetchable, snippet only). https://www.benzinga.com/news/26/11/62820620/dynatrace-q2-2027-earnings-call-transcript
+  - 2026-11-04: Datadog Q3: revenue $1.20B, +35% YoY; Q4 guide $1.19-1.20B; Q2 10-Q flagged lower usage from largest customer from Q3. Scout 1.0 / Bits Investigation claim NOT confirmed. https://www.sec.gov/Archives/edgar/data/0001561550/000162828026069792/ex-991x20260930x8k.htm
+  - ~2026-10-29: Datadog Scout specialist SRE model, closed preview; vendor claims parity with a larger Claude model at 1/4 cost (Datadog's own benchmark). https://infoq.com/news/2026/10/datadog-scout-sre-model
+
+### Theme 3: Observability is moving into the coding agent
+- **Thesis:** Change risk is now assessed inside the coding agent before deploy, which collides with ITSM change management.
+- **Status:** building (1 data point)
+- **Data points:**
+  - 2026-10-30: New Relic Change Tracking for GitHub Copilot (public preview); Autopilot for GitHub MCP Server GA. https://itwire.com/business-it-news/business-intelligence/new-relic-change-tracking-brings-headless-intelligent-observability-directly-into-github-copilot-empowering-developers-to-ship-code-with-confidence
+
+## Content Backlog
+- 2026-11-01: LinkedIn — "The AIOps moat is telemetry, not the model" (Theme 2, Galloway-style contrarian). Status: suggested.
+- 2026-11-01: Substack — "The Agent Control Plane" (Theme 1). Status: drafted (chief-of-staff/drafts/2026-11-substack-the-agent-control-plane.md), not yet published.
+- 2026-11-01: LinkedIn — "Who approves your AI agent?" (Theme 1) with dynamic diagram chief-of-staff/visuals/2026-11-01-agent-control-plane.mp4. Status: drafted (chief-of-staff/drafts/2026-11-02-linkedin-who-approves-your-ai-agent.md), not yet published.
+- 2026-11-01: One-page — "Agent Control Plane Scorecard" grid (vendors x layers: identity, policy, trace, enforcement/kill, standards). Status: suggested. (Merged with the 2026-11-04 "Who owns each layer of the agent control loop" grid, same idea.)
+- 2026-11-01: Visual — one-page map of where observability vendors plug into the AI agent lifecycle (Bhatia-style). Status: suggested.
+
+
+- 2026-11-05: LinkedIn — "Four layers, one loop: identity, policy, trace, kill" (Theme 1, Bhatia-style one-page visual) with diagram chief-of-staff/visuals/2026-11-05-identity-policy-trace-kill.mp4. Status: suggested.
+
+- 2026-11-04 (merged 11-06): LinkedIn — "Security vendors are buying the agent trace" / "Three buyers, one asset" (Theme 1, Galloway-style contrarian, timeline) with diagram chief-of-staff/visuals/2026-11-06-agent-trace-buyers.mp4. Status: suggested.
+
+## Visuals
+- 2026-11-01 · agent-control-plane · Theme 1 · 6-step flow: request, identity, policy, enforcement, tools, production + observability feedback loop · updated 2026-11-01 · used by: LinkedIn "Who approves your AI agent?" (drafted), Substack "The Agent Control Plane" (drafted).
+- 2026-11-05 · identity-policy-trace-kill · Theme 1 · 4-step loop: identity, policy, trace, kill · updated 2026-11-05 · used by: LinkedIn "Four layers, one loop". Supersedes 2026-11-04 who-owns-the-trace (same loop, fewer layers; deleted 2026-11-06 during dedup).
+- 2026-11-06 · agent-trace-buyers · Theme 1 · acquisition timeline: Palo Alto–Chronosphere, Cisco–Galileo, CrowdStrike–Fiddler · updated 2026-11-06 · used by: LinkedIn "Security vendors are buying the agent trace".
+- Note: files dated 2026-11-04/05/06 were named with the UTC date; the runs happened on 11-03/04/05 Mountain Time. New files use the Mountain Time date.
+
+## Content Log
+- (nothing recorded yet — tell me what you publish)
+
+## Stories Covered
+- 2026-11-01: Dynatrace AI observability ingest; Datadog Scout; New Relic + Copilot change tracking; AI-training opt-out token (unverified, aggregator); ServiceNow AI Passport; Digitate ignio Hummingbird.
+- 2026-11-01 (run 2): Agentic AI Foundation new projects (Oct 22); OutSystems governance-gap survey (Oct 28); Microsoft/Google agent governance (context, May).
+
+- 2026-11-04: CrowdStrike–Fiddler/Dreadnode (Nov 3); Dynatrace Q2 FY27 call (Nov 4); Dynatrace agents integrations (TechTarget, earlier, context).
+
+- 2026-11-05: NIST agent identity tenets; Datadog Q3 (Nov 4); CrowdStrike kill switch (repeat, new corroboration); Rapid7 Q3, Meta-Conductor (aggregator only, not featured).
+
+- 2026-11-06: Thin day, no verified stories dated Nov 4-6 beyond already covered. Re-surfaced Cisco-Galileo, Grafana GA, Palo Alto-Chronosphere as context only.
+
+- 2026-11-06 (run 2): Quiet day, no verified Tier 1/2 stories dated Nov 4-6 beyond those covered. Context only: Splunk State of Observability (Oct 20, Cisco newsroom https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m10/splunk-state-of-observability-2026-avoiding-the-hidden-costs-of-ai-agents.html), Ardoq MCP GA / SAP LeanIX MCP server (undated vendor pages). Frontier AI: nothing verified.
+
+## Patterns
+- 2026-11-01: Weekend runs have little fresh news; Sunday is best used to deepen a theme rather than scan.
+- 2026-11-01: Frontier-AI news searches return many aggregator/newsletter pages with conflicting dates. Prefer company blogs and named trade press.
+- 2026-11-04: Web search returns mostly stale results; adding explicit date strings (e.g. "November 3, 2026") surfaced fresh stories. WebFetch hosts (techcrunch, benzinga, techtarget) are blocked in this environment: snippets only. Substack 'Agent Control Plane' and LinkedIn drafts still unpublished 3 days on (pattern: drafts pile up, nothing logged as published).
+- 2026-11-05: Thin news day; vendor-specific searches returned nothing dated Nov 4-5 for ITSM/EA. WebFetch blocked for investors.datadoghq.com and aiagentsdirectory.com. Drafts still unpublished 4 days; Content Log empty.
+- 2026-11-06 (dedup): Three quiet days in a row produced three near-identical Theme 1 diagrams (11-04 and 11-05 were the same loop). Rule added: update or reuse an existing diagram instead of drawing a new one for the same theme and structure.
+- 2026-11-06: Quiet day again (3rd in a row). WebFetch blocked for itpro.com. Drafts unpublished 5 days; Content Log empty. LinkedIn gap flagged.
+- 2026-11-06 (run 2): 4th quiet day in a row; date-string searches returned no Nov 5-6 items. Diagram reused (agent-trace-buyers), no new visual. Drafts unpublished 5 days; Content Log empty; LinkedIn gap persists. Theme 3 has had no new evidence since Oct 30 (fading flag at Nov 13).
