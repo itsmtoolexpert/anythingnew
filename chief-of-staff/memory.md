@@ -1,6 +1,6 @@
 # Research Memory — Emerging Things
 
-_Last updated: Fri 2026-11-06 (evening run)._
+_Last updated: Fri 2026-11-06 (evening run 2, MT)._
 
 ## Narrative Tracker
 
@@ -69,6 +69,8 @@ _Last updated: Fri 2026-11-06 (evening run)._
 
 - 2026-11-06: Thin day, no verified stories dated Nov 4-6 beyond already covered. Re-surfaced Cisco-Galileo, Grafana GA, Palo Alto-Chronosphere as context only.
 
+- 2026-11-06 (run 2): Quiet day, no verified Tier 1/2 stories dated Nov 4-6 beyond those covered. Context only: Splunk State of Observability (Oct 20, Cisco newsroom https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m10/splunk-state-of-observability-2026-avoiding-the-hidden-costs-of-ai-agents.html), Ardoq MCP GA / SAP LeanIX MCP server (undated vendor pages). Frontier AI: nothing verified.
+
 ## Patterns
 - 2026-11-01: Weekend runs have little fresh news; Sunday is best used to deepen a theme rather than scan.
 - 2026-11-01: Frontier-AI news searches return many aggregator/newsletter pages with conflicting dates. Prefer company blogs and named trade press.
@@ -76,3 +78,4 @@ _Last updated: Fri 2026-11-06 (evening run)._
 - 2026-11-05: Thin news day; vendor-specific searches returned nothing dated Nov 4-5 for ITSM/EA. WebFetch blocked for investors.datadoghq.com and aiagentsdirectory.com. Drafts still unpublished 4 days; Content Log empty.
 - 2026-11-06 (dedup): Three quiet days in a row produced three near-identical Theme 1 diagrams (11-04 and 11-05 were the same loop). Rule added: update or reuse an existing diagram instead of drawing a new one for the same theme and structure.
 - 2026-11-06: Quiet day again (3rd in a row). WebFetch blocked for itpro.com. Drafts unpublished 5 days; Content Log empty. LinkedIn gap flagged.
+- 2026-11-06 (run 2): 4th quiet day in a row; date-string searches returned no Nov 5-6 items. Diagram reused (agent-trace-buyers), no new visual. Drafts unpublished 5 days; Content Log empty; LinkedIn gap persists. Theme 3 has had no new evidence since Oct 30 (fading flag at Nov 13).
