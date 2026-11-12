@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350" font-family="Helvetica,Arial,sans-serif">
+<style>
+  .t{fill:#1a1a1a}
+  .m{fill:#555}
+  .chip{fill:#fff;stroke:#999;stroke-width:3}
+  .lit1{animation:lit 10s infinite;animation-delay:0s}
+  .lit2{animation:lit 10s infinite;animation-delay:-7.5s}
+  .lit3{animation:lit 10s infinite;animation-delay:-5s}
+  .lit4{animation:lit 10s infinite;animation-delay:-2.5s}
+  @keyframes lit{0%,4%{fill:#fff}8%,22%{fill:#FFE9A8}28%,100%{fill:#fff}}
+  .pulse{animation:pulse 2.5s infinite}
+  @keyframes pulse{0%,100%{fill:#1F3A5F}50%{fill:#D9480F}}
+  .flow{stroke:#bbb;stroke-width:4;stroke-dasharray:10 10;fill:none}
+</style>
+<rect width="1080" height="1350" fill="#F7F5F0"/>
+
+<text x="60" y="100" font-size="54" font-weight="700" class="t">Agent cost needs</text>
+<text x="60" y="162" font-size="54" font-weight="700" class="t">a denominator</text>
+<text x="60" y="208" font-size="24" class="m">Tokens are the numerator. IT outcomes are the denominator.</text>
+
+<!-- Numerator -->
+<rect x="60" y="240" width="960" height="210" rx="18" fill="#fff" stroke="#1F3A5F" stroke-width="3"/>
+<text x="90" y="280" font-size="22" font-weight="700" fill="#1F3A5F">WHAT THE AGENT SPENDS</text>
+<rect x="90" y="300" width="270" height="70" rx="14" class="chip lit1"/>
+<text x="225" y="345" font-size="26" font-weight="700" class="t" text-anchor="middle">Amazon Bedrock</text>
+<rect x="405" y="300" width="270" height="70" rx="14" class="chip lit1"/>
+<text x="540" y="345" font-size="26" font-weight="700" class="t" text-anchor="middle">CloudWatch</text>
+<rect x="720" y="300" width="270" height="70" rx="14" class="chip lit1"/>
+<text x="855" y="345" font-size="24" font-weight="700" class="t" text-anchor="middle">Splunk Tokenomics</text>
+<path d="M360 335 H405 M675 335 H720" class="flow"/>
+<text x="90" y="412" font-size="21" class="m">Cost per agent, paired with evals of the work's quality</text>
+<text x="90" y="438" font-size="21" class="m">Cisco, Nov 9 · private preview December</text>
+
+<!-- Fraction bar -->
+<rect x="60" y="478" width="960" height="10" rx="5" fill="#1a1a1a"/>
+<circle cx="540" cy="483" r="30" fill="#F7F5F0" stroke="#1a1a1a" stroke-width="4"/><text x="540" y="497" font-size="40" font-weight="700" class="t" text-anchor="middle">÷</text>
+
+<!-- Denominator -->
+<rect x="60" y="515" width="960" height="200" rx="18" fill="#fff" stroke="#2B6E4F" stroke-width="3"/>
+<text x="90" y="555" font-size="22" font-weight="700" fill="#2B6E4F">WHAT THE AGENT ACHIEVED</text>
+<rect x="90" y="575" width="270" height="70" rx="14" class="chip lit2"/>
+<text x="225" y="620" font-size="26" font-weight="700" class="t" text-anchor="middle">Incident resolved</text>
+<rect x="405" y="575" width="270" height="70" rx="14" class="chip lit2"/>
+<text x="540" y="620" font-size="26" font-weight="700" class="t" text-anchor="middle">Change succeeded</text>
+<rect x="720" y="575" width="270" height="70" rx="14" class="chip lit2"/>
+<text x="855" y="620" font-size="26" font-weight="700" class="t" text-anchor="middle">Ticket closed</text>
+<text x="90" y="690" font-size="21" class="m">Outcome records sit in ITSM: ServiceNow, Jira Service Mgmt, Freshservice</text>
+
+<!-- Tokens travelling into the result -->
+<circle r="12" fill="#1F3A5F"><animateMotion dur="2.5s" repeatCount="indefinite" path="M855 370 C 900 470, 700 740, 540 790"/></circle>
+<circle r="12" fill="#2B6E4F"><animateMotion dur="2.5s" repeatCount="indefinite" begin="-1.25s" path="M225 645 C 200 720, 400 760, 540 790"/></circle>
+
+<!-- Result -->
+<rect x="140" y="745" width="800" height="100" rx="50" class="pulse"/>
+<text x="540" y="810" font-size="38" font-weight="700" fill="#fff" text-anchor="middle">= cost per resolved incident</text>
+
+<!-- Controls -->
+<text x="60" y="905" font-size="22" font-weight="700" fill="#D9480F">CONTROLS THAT ACT ON THE NUMBER</text>
+<rect x="60" y="925" width="960" height="62" rx="14" class="chip lit3"/>
+<text x="85" y="965" font-size="23" class="t"><tspan font-weight="700">Spend caps</tspan> · Mirantis Agent Platform (KubeCon, Nov 9-10)</text>
+<rect x="60" y="997" width="960" height="62" rx="14" class="chip lit3"/>
+<text x="85" y="1037" font-size="23" class="t"><tspan font-weight="700">Pause a running agent</tspan> · CrowdStrike Falcon (Nov 4)</text>
+<rect x="60" y="1069" width="960" height="62" rx="14" class="chip lit4"/>
+<text x="85" y="1109" font-size="23" class="t"><tspan font-weight="700">"No telemetry, no deployment"</tspan> · Gartner (Oct 26)</text>
+<rect x="60" y="1141" width="960" height="62" rx="14" class="chip lit4"/>
+<text x="85" y="1181" font-size="23" class="t"><tspan font-weight="700">&gt;50% over cost plans</tspan> on uncapped token pricing · Gartner</text>
+
+<!-- Thesis + footer -->
+<text x="540" y="1258" font-size="30" font-weight="700" class="t" text-anchor="middle">Whoever joins spend to outcome owns the agent budget.</text>
+<text x="540" y="1312" font-size="20" class="m" text-anchor="middle">Emerging Things · Rahul Adokar</text>
+</svg>

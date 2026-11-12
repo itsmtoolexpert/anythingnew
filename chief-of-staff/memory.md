@@ -1,12 +1,12 @@
 # Research Memory — Emerging Things
 
-_Last updated: Tue 2026-11-10 (evening run, MT)._
+_Last updated: Wed 2026-11-11 (evening run, MT)._
 
 ## Narrative Tracker
 
 ### Theme 1: The agent governance stack is forming
 - **Thesis:** Control over what IT agents may do is being split across ITSM (policy), observability (tracing) and silicon/runtime (enforcement). Whoever owns the policy layer owns the agent.
-- **Status:** 📈 Substack-ready (17 data points; Theme 4 challenges the single-owner framing)
+- **Status:** 📈 Substack-ready (19 data points; Theme 4 challenges the single-owner framing)
 - **Data points:**
   - 2026-10-21: ServiceNow AI Passport with NVIDIA, policy from AI Control Tower enforced at runtime. https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-delivers-industry-first-personal-enterprise-agent-and-policy-enforcement-with-NVIDIA-extending-AI-governance-across-software-and-silicon/default.aspx
   - 2026-10-28: Digitate ignio Hummingbird, built-in MCP and A2A servers for IT ops agents. https://www.tmcnet.com/usubmit/2026/10/28/10471511.htm
@@ -27,6 +27,8 @@ _Last updated: Tue 2026-11-10 (evening run, MT)._
   - 2026-11-03: Snowflake Expedition 2026: Cortex AI Gateway, agent tool calls authenticated with end-user identity and checked against policy before they run; agent abuse detection on full trajectories. https://www.snowflake.com/en/news/press-releases/expedition-2026-business-ontology-ai-gateway/ (page not fetchable; search snippets + blog https://snowflake.com/en/blog/ai-agents-governance-ai-security-cost-control)
   - 2026-11-09/10 (KubeCon NA, Salt Lake City): Mirantis Agent Platform GA (spend caps; one-click cut network access for all agents); Teleport Beams GA (zero standing privileges, human or LLM judge reviews access); Solo.io enterprise Agent Substrate + kagent GA. Source: Cloud Native Now KubeCon coverage (snippets only; not primary-confirmed). https://cloudnativenow.com/kubecon-cloudnativecon-north-america-2026/mirantis-launches-agent-platform-for-governed-ai-agents-on-kubernetes/
   - 2026-11-10: IBM + Microsoft Imagine Enterprise: platform to build, run and govern industry-specific agents on Foundry/Copilot Studio with Entra, Purview, Defender. https://news.microsoft.com/source/2026/11/10/ibm-and-microsoft-announce-a-new-ai-agent-platform-designed-for-industry-specific-transformation/
+  - 2026-11-04: CrowdStrike Agent Insider Threat Detection (Fal.Con Europe): per-agent behavioural baselines, alerts without a policy breach, analysts can pause/halt a running agent mid-task; lands in Falcon Next-Gen SIEM in Q4. https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-extends-agentic-soc-detect-and-stop-agent-insider
+  - 2026-11-09: Cisco adds Anthropic Claude Mythos to AI Defense adaptive red teaming (coming soon, select enterprises). https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-unveils-frontier-ai-red-teaming-and-agent-observability-to-secure-the-agentic-enterprise.html (page not fetchable; snippets)
   - Supporting stat (date ~2026-10-27): Splunk State of Observability 2026, 83% concerned about unintended consequences of AI agents. https://tahawultech.com/industry/technology/splunk-state-of-observability-2026-report-avoiding-the-hidden-costs-of-ai-agents
 
 ### Theme 2: In AIOps, the model is a commodity and telemetry is the moat
@@ -40,14 +42,25 @@ _Last updated: Tue 2026-11-10 (evening run, MT)._
 
 ### Theme 3: Observability is moving into the coding agent
 - **Thesis:** Change risk is now assessed inside the coding agent before deploy, which collides with ITSM change management.
-- **Status:** building (1 data point)
+- **Status:** building (1 data point); fading on 2026-11-13 if nothing new
 - **Data points:**
   - 2026-10-30: New Relic Change Tracking for GitHub Copilot (public preview); Autopilot for GitHub MCP Server GA. https://itwire.com/business-it-news/business-intelligence/new-relic-change-tracking-brings-headless-intelligent-observability-directly-into-github-copilot-empowering-developers-to-ship-code-with-confidence
 
 ### Theme 4: Every layer ships its own agent controls (no single control plane)
 - **Thesis:** Agent controls are fragmenting by layer (app/identity, data, runtime, observability). No one owns the whole loop, so the scarce asset is a cross-layer agent system of record; ITSM/CMDB is the natural home if it moves fast. Counter: Microsoft-style consolidation may make one stack's console the de facto record.
-- **Status:** building (4 data points, all 2026-11-03 to 11-10; see Theme 1 entries for Snowflake, KubeCon runtime vendors, IBM+Microsoft, plus New Relic in Theme 2)
-- **Data points:** Snowflake Cortex AI Gateway (11-03); Mirantis/Teleport/Solo.io at KubeCon (11-09/10, trade-press only); IBM+Microsoft Imagine Enterprise (11-10); New Relic Autopilot K8s agent (11-10). Context: CrowdStrike kill switch (11-04), ServiceNow AI Control Tower.
+- **Status:** building (6 data points, 2026-11-03 to 11-11; see Theme 1 entries for Snowflake, KubeCon runtime vendors, IBM+Microsoft, plus New Relic in Theme 2)
+- **Data points:** Snowflake Cortex AI Gateway (11-03); Mirantis/Teleport/Solo.io at KubeCon (11-09/10, trade-press only); IBM+Microsoft Imagine Enterprise (11-10); New Relic Autopilot K8s agent (11-10); Google donates Agent Substrate + gVisor + OpenRL to CNCF Sandbox, Agent Substrate 1.0 GA on GKE (~11-05, KubeCon; Google OSS blog https://opensource.googleblog.com/2026/11/sandboxing-untrusted-ai-agents-at-scale.html, not fetchable); SUSE AI agents with human approval steps (KubeCon, Cloud Native Now, trade only). Context: CrowdStrike kill switch (11-04), ServiceNow AI Control Tower.
+
+### Theme 5: Agent cost needs a denominator (cost per outcome becomes a control)
+- **Thesis:** Agent spend is moving from FinOps into the agent control loop (caps, pause, cost graded against outcome). Observability owns the numerator (tokens); the denominator (incident resolved, change succeeded) lives in ITSM. Whoever joins the two owns the agent budget. Counter: vendors shift to bundled/outcome pricing (which Gartner says avoids the overrun), making per-outcome telemetry a niche.
+- **Status:** 📈 building, near Substack-ready (5 data points; needs an ITSM vendor reporting cost per resolved ticket/incident)
+- **Data points:**
+  - 2026-11-09: Cisco: Splunk Agent Observability Enhanced Tokenomics pairs each agent's cost with evals of quality/impact, using Bedrock + CloudWatch usage data; private preview Dec, GA on AWS Marketplace early 2027. https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-unveils-frontier-ai-red-teaming-and-agent-observability-to-secure-the-agentic-enterprise.html ; https://www.splunk.com/en_us/blog/leadership/splunk-by-cisco-brings-agent-roi-to-aws-marketplace.html
+  - 2026-10-26: Gartner I&O AI trends 2027: through 2027, IT-ops agent deployments on uncapped token pricing exceed initial cost expectations by >50% vs subscription/bundled pricing; recommends "no telemetry, no deployment". https://www.gartner.com/en/newsroom/press-releases/2026-10-26-gartner-identifies-the-top-ai-trends-in-infrastructure-and-it-operations-for-2027 (not fetchable; wording via search snippets + https://cxotoday.com/media-coverage/gartner-identifies-the-top-ai-trends-in-infrastructure-and-it-operations-for-2027/)
+  - 2026-11-09/10: Mirantis Agent Platform GA with spend caps (Cloud Native Now, trade only). https://cloudnativenow.com/kubecon-cloudnativecon-north-america-2026/mirantis-launches-agent-platform-for-governed-ai-agents-on-kubernetes/
+  - 2026-11-04: CrowdStrike: pause a running agent to stop unauthorized action and runaway spend. https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-extends-agentic-soc-detect-and-stop-agent-insider
+  - 2026-08 (context, via trade press netzwoche, unverified): Gartner predicts inference cost per agentic workflow rises >5x through 2028 despite falling token prices. https://www.netzwoche.ch/news/2026-08-24/inferenzkosten-fuer-ki-agenten-steigen-bis-2028-auf-mehr-als-das-fuenffache
+  - 2026-09-15 (context): Splunk Tokenomics first launched (see Theme 1).
 
 ## Content Backlog
 - 2026-11-01: LinkedIn — "The AIOps moat is telemetry, not the model" (Theme 2, Galloway-style contrarian). Status: suggested.
@@ -62,6 +75,8 @@ _Last updated: Tue 2026-11-10 (evening run, MT)._
 - 2026-11-04 (merged 11-06): LinkedIn — "Security vendors are buying the agent trace" / "Three buyers, one asset" (Theme 1, Galloway-style contrarian, timeline) with diagram chief-of-staff/visuals/2026-11-06-agent-trace-buyers.mp4. Status: suggested.
 
 - 2026-11-10: LinkedIn — "Every layer now ships its own agent controls. Who keeps the record?" (Theme 4, Bhatia-style stack visual + Galloway-style closing take) with diagram chief-of-staff/visuals/2026-11-10-every-layer-agent-controls.mp4. Status: suggested.
+- 2026-11-11: LinkedIn — "Agent cost needs a denominator" (Theme 5, Galloway-style contrarian + Bhatia-style equation visual) with diagram chief-of-staff/visuals/2026-11-11-agent-cost-per-outcome.mp4. Status: suggested.
+- 2026-11-11: Substack — "Cost per Resolved Incident: the agent metric IT already owns" (Theme 5 + Theme 4). Status: suggested; needs 1-2 more data points (an ITSM vendor exposing cost per resolution; a buyer survey on agent cost overruns).
 - 2026-11-10: Substack — "The Agent System of Record" (Theme 4 + Theme 1; why ITSM/CMDB, not another console, should hold agent decisions). Status: suggested; needs 2 more data points (an ITSM vendor ingesting agent actions from other layers; a buyer survey on agent inventory).
 
 ## Visuals
@@ -69,6 +84,7 @@ _Last updated: Tue 2026-11-10 (evening run, MT)._
 - 2026-11-05 · identity-policy-trace-kill · Theme 1 · 4-step loop: identity, policy, trace, kill · updated 2026-11-05 · used by: LinkedIn "Four layers, one loop". Supersedes 2026-11-04 who-owns-the-trace (same loop, fewer layers; deleted 2026-11-06 during dedup).
 - 2026-11-06 · agent-trace-buyers · Theme 1 · acquisition timeline (4 rows): Palo Alto–Chronosphere, Cisco–Galileo, Dynatrace–Arize, CrowdStrike–Fiddler · updated 2026-11-09 · used by: LinkedIn "Security vendors are buying the agent trace".
 - 2026-11-10 · every-layer-agent-controls · Theme 4 · 4-layer stack (app+identity, data, runtime, observability) each with its own control toggle, feeding an empty "agent system of record" column · updated 2026-11-10 · used by: LinkedIn "Every layer now ships its own agent controls".
+- 2026-11-11 · agent-cost-per-outcome · Theme 5 · fraction/equation: numerator (Bedrock, CloudWatch, Splunk Tokenomics) ÷ denominator (incident resolved, change succeeded, ticket closed) = cost per resolved incident, plus 4 control rows (Mirantis caps, CrowdStrike pause, Gartner x2) · updated 2026-11-11 · used by: LinkedIn "Agent cost needs a denominator".
 - Note: files dated 2026-11-04/05/06 were named with the UTC date; the runs happened on 11-03/04/05 Mountain Time. New files use the Mountain Time date.
 
 ## Content Log
@@ -90,6 +106,8 @@ _Last updated: Tue 2026-11-10 (evening run, MT)._
 
 - 2026-11-10: KubeCon NA (Nov 9-12): Mirantis Agent Platform GA, Teleport Beams GA, Solo.io Agent Substrate/kagent GA, New Relic Autopilot K8s agent (Nov 10); IBM+Microsoft Imagine Enterprise (Nov 10); Snowflake Expedition Cortex AI Gateway (Nov 3, still-worth-tracking). Not featured: ServiceNow AIOps AI Specialist GA (store listing only, undated); Google Agentic Data Cloud update (Nov 4, CIO Dive); ControlTheory Dstl8 2.0.
 
+- 2026-11-11: Cisco Splunk Tokenomics + Mythos red teaming (Nov 9); Google Agent Substrate/gVisor/OpenRL to CNCF (~Nov 5, still-worth-tracking); SUSE agents with human approval (KubeCon, trade); CrowdStrike Agent Insider Threat Detection (Nov 4, still-worth-tracking); Tier 2: Anthropic office suite incl. Claude Meetings (Nov 10, Fortune) + Claude Fable 5.2 on Bedrock/Vertex/Foundry (Nov 9, AWS blog). Not featured: OpenAI ChatGPT Enterprise on AWS Marketplace (Nov 9, trade); OpenAI Business Hub (Nov 10, TechCrunch); TechTarget "Cisco agentic AI security push faces enterprise trust gap" (undated, used as counterpoint).
+
 ## Patterns
 - 2026-11-01: Weekend runs have little fresh news; Sunday is best used to deepen a theme rather than scan.
 - 2026-11-01: Frontier-AI news searches return many aggregator/newsletter pages with conflicting dates. Prefer company blogs and named trade press.
@@ -100,3 +118,4 @@ _Last updated: Tue 2026-11-10 (evening run, MT)._
 - 2026-11-06 (run 2): 4th quiet day in a row; date-string searches returned no Nov 5-6 items. Diagram reused (agent-trace-buyers), no new visual. Drafts unpublished 5 days; Content Log empty; LinkedIn gap persists. Theme 3 has had no new evidence since Oct 30 (fading flag at Nov 13).
 - 2026-11-09: 5th quiet run; no Monday-dated verified stories found. Diagram updated in place (Arize row added). Drafts unpublished 8 days; Content Log empty; LinkedIn gap persists. Theme 3 still no new evidence since Oct 30 (fading flag Nov 13).
 - 2026-11-10: First non-quiet run in a week, thanks to KubeCon NA. Conference weeks are the reliable source of fresh Tier 1 news; plan around KubeCon (Nov 9-12), Microsoft Ignite and AWS re:Invent. WebFetch blocked this run for snowflake.com, servicenow.com, cloudnativenow.com, techtimes.com: snippets only. Drafts unpublished 9 days; Content Log empty since memory began Nov 1 (10 days; not yet a 3-week pattern). Theme 3 still no evidence since Oct 30 (fading Nov 13).
+- 2026-11-11: KubeCon day 3; vendor KubeCon news from Datadog/Dynatrace/Grafana not found by search. New Theme 5 (agent cost per outcome). WebFetch blocked this run for newsroom.cisco.com, s21.q4cdn.com, gartner.com, opensource.googleblog.com: snippets only. Wednesday style check: Brij Kishore Pandey's 'demo vs production' contrast framing (aggregator mirrors, undated). Drafts unpublished 10 days; Content Log empty (no LinkedIn post and no Substack issue recorded since Nov 1).
