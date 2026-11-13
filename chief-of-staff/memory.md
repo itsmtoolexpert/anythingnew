@@ -1,6 +1,6 @@
 # Research Memory — Emerging Things
 
-_Last updated: Wed 2026-11-11 (evening run, MT)._
+_Last updated: Thu 2026-11-12 (evening run, MT)._
 
 ## Narrative Tracker
 
@@ -42,13 +42,14 @@ _Last updated: Wed 2026-11-11 (evening run, MT)._
 
 ### Theme 3: Observability is moving into the coding agent
 - **Thesis:** Change risk is now assessed inside the coding agent before deploy, which collides with ITSM change management.
-- **Status:** building (1 data point); fading on 2026-11-13 if nothing new
+- **Status:** building (2 data points; revived 2026-11-12, no longer fading)
 - **Data points:**
+  - 2026-11-04: Thoughtworks Technology Radar "production-aware coding agents": give coding agents governed access to production observability data and tools to review impact of deployed changes and help investigate incidents (search snippet; thoughtworks.com not fetchable). https://www.thoughtworks.com/radar/techniques/production-aware-coding-agents
   - 2026-10-30: New Relic Change Tracking for GitHub Copilot (public preview); Autopilot for GitHub MCP Server GA. https://itwire.com/business-it-news/business-intelligence/new-relic-change-tracking-brings-headless-intelligent-observability-directly-into-github-copilot-empowering-developers-to-ship-code-with-confidence
 
 ### Theme 4: Every layer ships its own agent controls (no single control plane)
 - **Thesis:** Agent controls are fragmenting by layer (app/identity, data, runtime, observability). No one owns the whole loop, so the scarce asset is a cross-layer agent system of record; ITSM/CMDB is the natural home if it moves fast. Counter: Microsoft-style consolidation may make one stack's console the de facto record.
-- **Status:** building (6 data points, 2026-11-03 to 11-11; see Theme 1 entries for Snowflake, KubeCon runtime vendors, IBM+Microsoft, plus New Relic in Theme 2)
+- **Status:** building (7 data points, 2026-11-03 to 11-12; Dynatrace State of Observability 2026 added 11-12, see Theme 6; see Theme 1 entries for Snowflake, KubeCon runtime vendors, IBM+Microsoft, plus New Relic in Theme 2)
 - **Data points:** Snowflake Cortex AI Gateway (11-03); Mirantis/Teleport/Solo.io at KubeCon (11-09/10, trade-press only); IBM+Microsoft Imagine Enterprise (11-10); New Relic Autopilot K8s agent (11-10); Google donates Agent Substrate + gVisor + OpenRL to CNCF Sandbox, Agent Substrate 1.0 GA on GKE (~11-05, KubeCon; Google OSS blog https://opensource.googleblog.com/2026/11/sandboxing-untrusted-ai-agents-at-scale.html, not fetchable); SUSE AI agents with human approval steps (KubeCon, Cloud Native Now, trade only). Context: CrowdStrike kill switch (11-04), ServiceNow AI Control Tower.
 
 ### Theme 5: Agent cost needs a denominator (cost per outcome becomes a control)
@@ -61,6 +62,14 @@ _Last updated: Wed 2026-11-11 (evening run, MT)._
   - 2026-11-04: CrowdStrike: pause a running agent to stop unauthorized action and runaway spend. https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-extends-agentic-soc-detect-and-stop-agent-insider
   - 2026-08 (context, via trade press netzwoche, unverified): Gartner predicts inference cost per agentic workflow rises >5x through 2028 despite falling token prices. https://www.netzwoche.ch/news/2026-08-24/inferenzkosten-fuer-ki-agenten-steigen-bis-2028-auf-mehr-als-das-fuenffache
   - 2026-09-15 (context): Splunk Tokenomics first launched (see Theme 1).
+
+### Theme 6: The autonomy gap is a verification gap
+- **Thesis:** Agents are everywhere in IT ops but few run unsupervised. The bottleneck isn't model capability; it's the human verification step (approvals, review of agent decisions), which nobody records in a reusable way. Whoever turns the human "yes" into a recorded, graded approval (ITSM record + observability trace) owns the path to autonomy. Counter: the numbers are self-reported vendor surveys; verification may drop on its own as models and trust improve.
+- **Status:** 📈 building (3 data points; started 2026-11-12)
+- **Data points:**
+  - ~2026-11-10/11: Dynatrace State of Observability 2026 (1,202 tech leaders, 12 countries, Aug 2026 survey): 87% use AI agents for observability/IT ops; 12% fully autonomous today; 44% target full autonomy within 5 years; humans verify avg 66% of AI decisions; only 27% address visibility into how agents decide and act; integration complexity top barrier (31%). Dynatrace blog https://www.dynatrace.com/news/blog/state-of-observability-report-2026-key-insights/ ; IR release https://ir.dynatrace.com/news-events/press-releases/detail/438/as-ai-scales-across-enterprises-breaking-points-emerge (both not fetchable; snippets; trade write-ups dated Nov 11-12: https://enterpriseitworldmea.com/ai-ambition-is-outpacing-operational-proof-dynatrace-warns-of-growing-observability-gap/)
+  - 2026-01 (context): Dynatrace Pulse of Agentic AI 2026 (919 leaders): 13% use fully autonomous agents; 69% of agentic decisions still verified by humans. https://www.dynatrace.com/news/press-release/pulse-of-agentic-ai-2026/
+  - Upcoming 2026-11-17/18 (Microsoft Ignite, Nov 17-20): Agent 365 sessions pitch it as the observability layer for agents and a single platform for IT admins to manage Microsoft and non-Microsoft agents, assign ownership, apply policy, govern lifecycle (Microsoft Tech Community guide, undated). https://techcommunity.microsoft.com/blog/agent-365-blog/microsoft-ignite-2026-your-guide-to-agent-365/4571750
 
 ## Content Backlog
 - 2026-11-01: LinkedIn — "The AIOps moat is telemetry, not the model" (Theme 2, Galloway-style contrarian). Status: suggested.
@@ -77,7 +86,8 @@ _Last updated: Wed 2026-11-11 (evening run, MT)._
 - 2026-11-10: LinkedIn — "Every layer now ships its own agent controls. Who keeps the record?" (Theme 4, Bhatia-style stack visual + Galloway-style closing take) with diagram chief-of-staff/visuals/2026-11-10-every-layer-agent-controls.mp4. Status: suggested.
 - 2026-11-11: LinkedIn — "Agent cost needs a denominator" (Theme 5, Galloway-style contrarian + Bhatia-style equation visual) with diagram chief-of-staff/visuals/2026-11-11-agent-cost-per-outcome.mp4. Status: suggested.
 - 2026-11-11: Substack — "Cost per Resolved Incident: the agent metric IT already owns" (Theme 5 + Theme 4). Status: suggested; needs 1-2 more data points (an ITSM vendor exposing cost per resolution; a buyer survey on agent cost overruns).
-- 2026-11-10: Substack — "The Agent System of Record" (Theme 4 + Theme 1; why ITSM/CMDB, not another console, should hold agent decisions). Status: suggested; needs 2 more data points (an ITSM vendor ingesting agent actions from other layers; a buyer survey on agent inventory).
+- 2026-11-12: LinkedIn — "87% use AI agents in IT ops. 12% let them run." (Theme 6, data-led hook + Galloway-style contrarian turn) with diagram chief-of-staff/visuals/2026-11-12-autonomy-verification-gap.mp4. Status: suggested.
+- 2026-11-10 (updated 11-12): Substack — "The Agent System of Record" (Theme 4 + Theme 1; why ITSM/CMDB, not another console, should hold agent decisions). Status: suggested; needs 1 more data point (an ITSM vendor ingesting agent actions/approvals from other layers). Buyer-survey gap partly filled by Dynatrace State of Observability 2026 (66% of AI decisions human-verified; 27% see how agents decide). Watch Microsoft Ignite Agent 365 (Nov 17-18) as the counter-case.
 
 ## Visuals
 - 2026-11-01 · agent-control-plane · Theme 1 · 6-step flow: request, identity, policy, enforcement, tools, production + observability feedback loop · updated 2026-11-01 · used by: LinkedIn "Who approves your AI agent?" (drafted), Substack "The Agent Control Plane" (drafted).
@@ -85,6 +95,7 @@ _Last updated: Wed 2026-11-11 (evening run, MT)._
 - 2026-11-06 · agent-trace-buyers · Theme 1 · acquisition timeline (4 rows): Palo Alto–Chronosphere, Cisco–Galileo, Dynatrace–Arize, CrowdStrike–Fiddler · updated 2026-11-09 · used by: LinkedIn "Security vendors are buying the agent trace".
 - 2026-11-10 · every-layer-agent-controls · Theme 4 · 4-layer stack (app+identity, data, runtime, observability) each with its own control toggle, feeding an empty "agent system of record" column · updated 2026-11-10 · used by: LinkedIn "Every layer now ships its own agent controls".
 - 2026-11-11 · agent-cost-per-outcome · Theme 5 · fraction/equation: numerator (Bedrock, CloudWatch, Splunk Tokenomics) ÷ denominator (incident resolved, change succeeded, ticket closed) = cost per resolved incident, plus 4 control rows (Mirantis caps, CrowdStrike pause, Gartner x2) · updated 2026-11-11 · used by: LinkedIn "Agent cost needs a denominator".
+- 2026-11-12 · autonomy-verification-gap · Theme 6 (+ Theme 4) · bar funnel (87% use, 44% target, 27% visibility, 12% autonomous) + 3-step loop (agent proposes, human verifies 66%, action runs) closing through "trace + approval record" · updated 2026-11-12 · used by: LinkedIn "87% use AI agents in IT ops. 12% let them run."
 - Note: files dated 2026-11-04/05/06 were named with the UTC date; the runs happened on 11-03/04/05 Mountain Time. New files use the Mountain Time date.
 
 ## Content Log
@@ -108,6 +119,8 @@ _Last updated: Wed 2026-11-11 (evening run, MT)._
 
 - 2026-11-11: Cisco Splunk Tokenomics + Mythos red teaming (Nov 9); Google Agent Substrate/gVisor/OpenRL to CNCF (~Nov 5, still-worth-tracking); SUSE agents with human approval (KubeCon, trade); CrowdStrike Agent Insider Threat Detection (Nov 4, still-worth-tracking); Tier 2: Anthropic office suite incl. Claude Meetings (Nov 10, Fortune) + Claude Fable 5.2 on Bedrock/Vertex/Foundry (Nov 9, AWS blog). Not featured: OpenAI ChatGPT Enterprise on AWS Marketplace (Nov 9, trade); OpenAI Business Hub (Nov 10, TechCrunch); TechTarget "Cisco agentic AI security push faces enterprise trust gap" (undated, used as counterpoint).
 
+- 2026-11-12: Quiet day (KubeCon final day, pre-Ignite lull). Featured: Dynatrace State of Observability 2026 (~Nov 10-11); Microsoft Ignite Agent 365 preview (upcoming); Chronosphere rebranded Cortex XCOR under Palo Alto (KubeCon sponsor page, undated); Thoughtworks Radar production-aware coding agents (Nov 4, tracker only). Tier 2: nothing verified (OpenAI GPT-6.x Astra reports conflict; OpenAI-Cursor cutoff via roundup only). Not featured: ServiceNow-LTM partnership (Nov 5, minor); Cisco ServiceNow connectors for exposure findings (Nov 10, aggregator only).
+
 ## Patterns
 - 2026-11-01: Weekend runs have little fresh news; Sunday is best used to deepen a theme rather than scan.
 - 2026-11-01: Frontier-AI news searches return many aggregator/newsletter pages with conflicting dates. Prefer company blogs and named trade press.
@@ -119,3 +132,4 @@ _Last updated: Wed 2026-11-11 (evening run, MT)._
 - 2026-11-09: 5th quiet run; no Monday-dated verified stories found. Diagram updated in place (Arize row added). Drafts unpublished 8 days; Content Log empty; LinkedIn gap persists. Theme 3 still no new evidence since Oct 30 (fading flag Nov 13).
 - 2026-11-10: First non-quiet run in a week, thanks to KubeCon NA. Conference weeks are the reliable source of fresh Tier 1 news; plan around KubeCon (Nov 9-12), Microsoft Ignite and AWS re:Invent. WebFetch blocked this run for snowflake.com, servicenow.com, cloudnativenow.com, techtimes.com: snippets only. Drafts unpublished 9 days; Content Log empty since memory began Nov 1 (10 days; not yet a 3-week pattern). Theme 3 still no evidence since Oct 30 (fading Nov 13).
 - 2026-11-11: KubeCon day 3; vendor KubeCon news from Datadog/Dynatrace/Grafana not found by search. New Theme 5 (agent cost per outcome). WebFetch blocked this run for newsroom.cisco.com, s21.q4cdn.com, gartner.com, opensource.googleblog.com: snippets only. Wednesday style check: Brij Kishore Pandey's 'demo vs production' contrast framing (aggregator mirrors, undated). Drafts unpublished 10 days; Content Log empty (no LinkedIn post and no Substack issue recorded since Nov 1).
+- 2026-11-12: Quiet day; search tools again returned stale results for ITSM, EA and cloud/data. WebFetch blocked for dynatrace.com, ir.dynatrace.com, thoughtworks.com: snippets only. Next big news window: Microsoft Ignite Nov 17-20, then AWS re:Invent. Drafts unpublished 11 days; Content Log empty (no LinkedIn post or Substack issue recorded since Nov 1). Same "drafts pile up" pattern now ~1.5 weeks; flag as a 3-week pattern if still true on Nov 22.
