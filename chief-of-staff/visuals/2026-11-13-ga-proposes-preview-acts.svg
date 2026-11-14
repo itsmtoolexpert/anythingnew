@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" font-family="Helvetica, Arial, sans-serif">
+<rect width="1080" height="1350" fill="#F7F5F0"/>
+<text x="60" y="112" font-size="62" font-weight="700" fill="#1B1F24">GA proposes. Preview acts.</text>
+<text x="60" y="165" font-size="26" fill="#3D4652">What this week's IT-ops agent releases let an agent do</text>
+<text x="60" y="262" font-size="22" font-weight="700" fill="#1F6F5C" letter-spacing="1">SHIPPING: AGENT PROPOSES</text>
+<text x="540" y="262" font-size="22" font-weight="700" fill="#8A5A00" text-anchor="middle" letter-spacing="1">HUMAN GATE</text>
+<text x="1020" y="262" font-size="22" font-weight="700" fill="#7A2E2E" text-anchor="end" letter-spacing="1">LATER: AGENT ACTS</text>
+
+<text x="60" y="332" font-size="28" font-weight="700" fill="#1B1F24">Red Hat OpenShift 5</text>
+<text x="60" y="362" font-size="22" fill="#5A6470">GA · Nov 9</text>
+<rect x="60" y="380" width="360" height="110" rx="14" fill="#E3F1EC" stroke="#1F6F5C" stroke-width="2"/>
+<text x="80" y="416" font-size="23" fill="#123D33">Lightspeed proposes</text>
+<text x="80" y="446" font-size="23" fill="#123D33">a fix in plain</text>
+<text x="80" y="476" font-size="23" fill="#123D33">language</text>
+<line x1="420" y1="435.0" x2="660" y2="435.0" stroke="#B9B2A3" stroke-width="3" stroke-dasharray="8 8"/>
+<g><circle cx="540" cy="435.0" r="30" fill="#FFF3D6" stroke="#8A5A00" stroke-width="3">
+<animate attributeName="r" dur="11.0s" repeatCount="indefinite" values="30;30;40;30;30" keyTimes="0;0.1000;0.1364;0.1727;1"/></circle>
+<text x="540" y="444.0" font-size="26" font-weight="700" fill="#8A5A00" text-anchor="middle">✓</text>
+<text x="540" y="520" font-size="21" fill="#8A5A00" text-anchor="middle">admin applies</text></g>
+<rect x="660" y="380" width="360" height="110" rx="14" fill="#FBEDED" stroke="#7A2E2E" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="660" y="380" width="360" height="110" rx="14" fill="none" stroke="#7A2E2E" stroke-width="5" opacity="0">
+<animate attributeName="opacity" dur="11.0s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.2273;0.2455;0.9636;1"/></rect>
+<text x="680" y="412" font-size="23" fill="#4A1C1C">Agentic updates:</text>
+<text x="680" y="441" font-size="23" fill="#4A1C1C">Technology</text>
+<text x="680" y="470" font-size="23" fill="#4A1C1C">Preview</text>
+<circle cx="240" cy="435.0" r="13" fill="#1F6F5C" opacity="0">
+<animate attributeName="cx" dur="11.0s" repeatCount="indefinite" values="400;400;440;510;540;540;640;640" keyTimes="0;0.0000;0.0364;0.1000;0.1182;0.1727;0.2364;1"/>
+<animate attributeName="opacity" dur="11.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.0000;0.0273;0.2364;0.2636;1"/></circle>
+<text x="60" y="557" font-size="28" font-weight="700" fill="#1B1F24">New Relic Autopilot</text>
+<text x="60" y="587" font-size="22" fill="#5A6470">K8s agent · preview · Nov 10</text>
+<rect x="60" y="605" width="360" height="110" rx="14" fill="#E3F1EC" stroke="#1F6F5C" stroke-width="2"/>
+<text x="80" y="641" font-size="23" fill="#123D33">Finds root cause,</text>
+<text x="80" y="671" font-size="23" fill="#123D33">writes fix code</text>
+<line x1="420" y1="660.0" x2="660" y2="660.0" stroke="#B9B2A3" stroke-width="3" stroke-dasharray="8 8"/>
+<g><circle cx="540" cy="660.0" r="30" fill="#FFF3D6" stroke="#8A5A00" stroke-width="3">
+<animate attributeName="r" dur="11.0s" repeatCount="indefinite" values="30;30;40;30;30" keyTimes="0;0.3727;0.4091;0.4455;1"/></circle>
+<text x="540" y="669.0" font-size="26" font-weight="700" fill="#8A5A00" text-anchor="middle">✓</text>
+<text x="540" y="745" font-size="21" fill="#8A5A00" text-anchor="middle">engineer reviews</text></g>
+<rect x="660" y="605" width="360" height="110" rx="14" fill="#FBEDED" stroke="#7A2E2E" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="660" y="605" width="360" height="110" rx="14" fill="none" stroke="#7A2E2E" stroke-width="5" opacity="0">
+<animate attributeName="opacity" dur="11.0s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.5000;0.5182;0.9636;1"/></rect>
+<text x="680" y="637" font-size="23" fill="#4A1C1C">Auto-apply:</text>
+<text x="680" y="666" font-size="23" fill="#4A1C1C">not announced</text>
+<circle cx="240" cy="660.0" r="13" fill="#1F6F5C" opacity="0">
+<animate attributeName="cx" dur="11.0s" repeatCount="indefinite" values="400;400;440;510;540;540;640;640" keyTimes="0;0.2727;0.3091;0.3727;0.3909;0.4455;0.5091;1"/>
+<animate attributeName="opacity" dur="11.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.2727;0.3000;0.5091;0.5364;1"/></circle>
+<text x="60" y="782" font-size="28" font-weight="700" fill="#1B1F24">ServiceNow control</text>
+<text x="60" y="812" font-size="22" fill="#5A6470">monitoring · Nov 10</text>
+<rect x="60" y="830" width="360" height="110" rx="14" fill="#E3F1EC" stroke="#1F6F5C" stroke-width="2"/>
+<text x="80" y="866" font-size="23" fill="#123D33">Agents flag failing</text>
+<text x="80" y="896" font-size="23" fill="#123D33">or drifting controls</text>
+<line x1="420" y1="885.0" x2="660" y2="885.0" stroke="#B9B2A3" stroke-width="3" stroke-dasharray="8 8"/>
+<g><circle cx="540" cy="885.0" r="30" fill="#FFF3D6" stroke="#8A5A00" stroke-width="3">
+<animate attributeName="r" dur="11.0s" repeatCount="indefinite" values="30;30;40;30;30" keyTimes="0;0.6455;0.6818;0.7182;1"/></circle>
+<text x="540" y="894.0" font-size="26" font-weight="700" fill="#8A5A00" text-anchor="middle">✓</text>
+<text x="540" y="970" font-size="21" fill="#8A5A00" text-anchor="middle">ticket opened</text></g>
+<rect x="660" y="830" width="360" height="110" rx="14" fill="#FBEDED" stroke="#7A2E2E" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="660" y="830" width="360" height="110" rx="14" fill="none" stroke="#7A2E2E" stroke-width="5" opacity="0">
+<animate attributeName="opacity" dur="11.0s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.7727;0.7909;0.9636;1"/></rect>
+<text x="680" y="862" font-size="23" fill="#4A1C1C">Fix starts on</text>
+<text x="680" y="891" font-size="23" fill="#4A1C1C">platform · GA</text>
+<text x="680" y="920" font-size="23" fill="#4A1C1C">expected Q1 2027</text>
+<circle cx="240" cy="885.0" r="13" fill="#1F6F5C" opacity="0">
+<animate attributeName="cx" dur="11.0s" repeatCount="indefinite" values="400;400;440;510;540;540;640;640" keyTimes="0;0.5455;0.5818;0.6455;0.6636;0.7182;0.7818;1"/>
+<animate attributeName="opacity" dur="11.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.5455;0.5727;0.7818;0.8091;1"/></circle>
+<rect x="60" y="985" width="960" height="150" rx="16" fill="#1B1F24"/>
+<rect x="60" y="985" width="960" height="150" rx="16" fill="none" stroke="#F2B544" stroke-width="6" opacity="0">
+<animate attributeName="opacity" dur="11.0s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.8182;0.8455;0.9727;1"/></rect>
+<text x="90" y="1030" font-size="22" fill="#C9CFD6">Dynatrace State of Observability 2026 (1,202 tech leaders)</text>
+<text x="90" y="1105" font-size="64" font-weight="700" fill="#F2B544">12%</text>
+<text x="235" y="1080" font-size="23" fill="#FFFFFF">run AI agents</text>
+<text x="235" y="1110" font-size="23" fill="#FFFFFF">fully autonomously</text>
+<text x="560" y="1105" font-size="64" font-weight="700" fill="#F2B544">66%</text>
+<text x="705" y="1080" font-size="23" fill="#FFFFFF">of AI decisions are</text>
+<text x="705" y="1110" font-size="23" fill="#FFFFFF">verified by humans</text>
+<text x="60" y="1200" font-size="30" font-weight="700" fill="#1B1F24">The bottleneck is the gate. Whoever records</text>
+<text x="60" y="1240" font-size="30" font-weight="700" fill="#1B1F24">the human "yes" owns the path to autonomy.</text>
+<line x1="60" y1="1275" x2="1020" y2="1275" stroke="#D6D0C4" stroke-width="2"/>
+<text x="60" y="1312" font-size="22" fill="#3D4652">Emerging Things · Rahul Adokar</text>
+<text x="1020" y="1312" font-size="20" fill="#5A6470" text-anchor="end">Sources: Red Hat, New Relic, ServiceNow, Dynatrace</text>
+</svg>
