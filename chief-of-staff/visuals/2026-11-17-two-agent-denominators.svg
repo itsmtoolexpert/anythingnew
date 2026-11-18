@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350" font-family="Helvetica,Arial,sans-serif">
+<style>
+  .t{fill:#1a1a1a}
+  .m{fill:#555}
+  .chip{fill:#fff;stroke:#999;stroke-width:3}
+  .litL{animation:litL 10s infinite}
+  .litR{animation:litR 10s infinite}
+  @keyframes litL{0%,10%{fill:#fff}18%,45%{fill:#DCE8F7}52%,100%{fill:#fff}}
+  @keyframes litR{0%,60%{fill:#fff}68%,95%{fill:#DDF0E4}100%{fill:#fff}}
+  .litTop{animation:litTop 5s infinite}
+  @keyframes litTop{0%,30%{fill:#FFE9A8}45%,100%{fill:#fff}}
+  .q{animation:q 10s infinite}
+  @keyframes q{0%,40%{fill:#1F3A5F}50%,90%{fill:#2B6E4F}100%{fill:#1F3A5F}}
+  .flow{stroke:#bbb;stroke-width:4;stroke-dasharray:10 10;fill:none}
+</style>
+<rect width="1080" height="1350" fill="#F7F5F0"/>
+
+<text x="60" y="100" font-size="54" font-weight="700" class="t">Who writes the agent's</text>
+<text x="60" y="162" font-size="54" font-weight="700" class="t">denominator?</text>
+<text x="60" y="210" font-size="24" class="m">Spend is easy to count. The fight is over what counts as value.</text>
+
+<!-- Numerator -->
+<rect x="60" y="240" width="960" height="170" rx="18" fill="#fff" stroke="#D9480F" stroke-width="3"/>
+<text x="90" y="280" font-size="22" font-weight="700" fill="#D9480F">WHAT AGENTS SPEND (NUMERATOR)</text>
+<rect x="90" y="300" width="430" height="80" rx="14" class="chip litTop"/>
+<text x="305" y="335" font-size="24" font-weight="700" class="t" text-anchor="middle">Agent 365 Cost Management</text>
+<text x="305" y="364" font-size="20" class="m" text-anchor="middle">Microsoft · preview · Nov 17</text>
+<rect x="560" y="300" width="430" height="80" rx="14" class="chip litTop"/>
+<text x="775" y="335" font-size="24" font-weight="700" class="t" text-anchor="middle">Splunk Tokenomics</text>
+<text x="775" y="364" font-size="20" class="m" text-anchor="middle">Cisco · private preview Dec</text>
+
+<!-- Fork -->
+<path d="M540 410 V450 M540 450 H285 V490 M540 450 H795 V490" class="flow"/>
+<circle cx="540" cy="450" r="26" fill="#F7F5F0" stroke="#1a1a1a" stroke-width="4"/>
+<text x="540" y="463" font-size="36" font-weight="700" class="t" text-anchor="middle">÷</text>
+
+<!-- Left: Microsoft -->
+<rect x="60" y="490" width="450" height="500" rx="18" class="litL" stroke="#1F3A5F" stroke-width="3"/>
+<text x="85" y="530" font-size="22" font-weight="700" fill="#1F3A5F">DENOMINATOR A</text>
+<text x="85" y="572" font-size="32" font-weight="700" class="t">Work completed</text>
+<text x="85" y="610" font-size="22" class="m">Agent 365 Business Analytics</text>
+<text x="85" y="638" font-size="22" class="m">Frontier preview · Nov 17</text>
+<rect x="85" y="660" width="400" height="56" rx="12" class="chip"/>
+<text x="285" y="696" font-size="22" font-weight="700" class="t" text-anchor="middle">Task success rate</text>
+<rect x="85" y="726" width="400" height="56" rx="12" class="chip"/>
+<text x="285" y="762" font-size="22" font-weight="700" class="t" text-anchor="middle">User satisfaction</text>
+<rect x="85" y="792" width="400" height="56" rx="12" class="chip"/>
+<text x="285" y="828" font-size="22" font-weight="700" class="t" text-anchor="middle">Assisted hours</text>
+<text x="85" y="885" font-size="21" class="m">Non-Microsoft agents: Dec 2026</text>
+<text x="85" y="915" font-size="21" class="m">50M+ agents registered in</text>
+<text x="85" y="943" font-size="21" class="m">Agent 365 since May</text>
+<text x="85" y="972" font-size="20" font-weight="700" fill="#1F3A5F">Owner: the productivity suite</text>
+
+<!-- Right: ITSM -->
+<rect x="570" y="490" width="450" height="500" rx="18" class="litR" stroke="#2B6E4F" stroke-width="3"/>
+<text x="595" y="530" font-size="22" font-weight="700" fill="#2B6E4F">DENOMINATOR B</text>
+<text x="595" y="572" font-size="32" font-weight="700" class="t">IT outcome</text>
+<text x="595" y="610" font-size="22" class="m">BMC Helix Agent Outcomes</text>
+<text x="595" y="638" font-size="22" class="m">HelixGPT 26.3 · dashboard</text>
+<rect x="595" y="660" width="400" height="56" rx="12" class="chip"/>
+<text x="795" y="696" font-size="22" font-weight="700" class="t" text-anchor="middle">Incident resolved</text>
+<rect x="595" y="726" width="400" height="56" rx="12" class="chip"/>
+<text x="795" y="762" font-size="22" font-weight="700" class="t" text-anchor="middle">Change succeeded</text>
+<rect x="595" y="792" width="400" height="56" rx="12" class="chip"/>
+<text x="795" y="828" font-size="22" font-weight="700" class="t" text-anchor="middle">Change risk scored</text>
+<text x="595" y="885" font-size="21" class="m">Change Coordinator agent</text>
+<text x="595" y="915" font-size="21" class="m">scores risk; humans approve,</text>
+<text x="595" y="943" font-size="21" class="m">hold or reject</text>
+<text x="595" y="972" font-size="20" font-weight="700" fill="#2B6E4F">Owner: the service record</text>
+
+<!-- Tokens: spend travels to one denominator, then the other -->
+<circle r="14" fill="#D9480F">
+  <animateMotion dur="10s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.4;1" calcMode="linear" path="M305 380 C 305 440, 285 450, 285 690"/>
+  <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="1;1;0;0" keyTimes="0;0.45;0.46;1"/>
+</circle>
+<circle r="14" fill="#D9480F" opacity="0">
+  <animateMotion dur="10s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.5;0.9;1" calcMode="linear" path="M775 380 C 775 440, 795 450, 795 690"/>
+  <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.5;0.51;0.95;1"/>
+</circle>
+
+<!-- Question -->
+<rect x="60" y="1020" width="960" height="110" rx="55" class="q"/>
+<text x="540" y="1065" font-size="30" font-weight="700" fill="#fff" text-anchor="middle">Cost per assisted hour,</text>
+<text x="540" y="1105" font-size="30" font-weight="700" fill="#fff" text-anchor="middle">or cost per resolved incident?</text>
+
+<!-- Thesis + footer -->
+<text x="540" y="1200" font-size="29" font-weight="700" class="t" text-anchor="middle">The denominator you accept decides</text>
+<text x="540" y="1240" font-size="29" font-weight="700" class="t" text-anchor="middle">who owns your agent budget.</text>
+<text x="540" y="1312" font-size="20" class="m" text-anchor="middle">Emerging Things · Rahul Adokar</text>
+</svg>
