@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <style>
+    .box { fill: #FFFFFF; stroke: #CBD5E1; stroke-width: 2; }
+    .lit { animation: lit 10s infinite; animation-fill-mode: backwards; }
+    @keyframes lit {
+      0%   { fill: #FFFFFF; stroke: #CBD5E1; }
+      3%   { fill: #DBEAFE; stroke: #2563EB; }
+      13%  { fill: #DBEAFE; stroke: #2563EB; }
+      20%  { fill: #FFFFFF; stroke: #CBD5E1; }
+      100% { fill: #FFFFFF; stroke: #CBD5E1; }
+    }
+    .obs { animation: obs 10s infinite; }
+    @keyframes obs {
+      0%, 62%  { fill: #FFFFFF; stroke: #CBD5E1; }
+      66%, 80% { fill: #FEF3C7; stroke: #D97706; }
+      86%, 100% { fill: #FFFFFF; stroke: #CBD5E1; }
+    }
+    .fb { animation: fb 10s infinite; }
+    @keyframes fb {
+      0%, 84%  { opacity: 0; }
+      88%, 96% { opacity: 1; }
+      100%     { opacity: 0; }
+    }
+    .verdict { animation: verdict 10s infinite; }
+    @keyframes verdict {
+      0%, 30%  { opacity: 0; }
+      34%, 46% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    .t  { fill: #0F172A; font-weight: 700; font-size: 29px; }
+    .s  { fill: #475569; font-size: 21px; }
+    .n  { fill: #FFFFFF; font-weight: 700; font-size: 22px; text-anchor: middle; }
+  </style>
+
+  <rect width="1080" height="1350" fill="#F8FAFC"/>
+
+  <!-- Title -->
+  <text x="60" y="100" fill="#0F172A" font-size="54" font-weight="800">Who approves your AI agent?</text>
+  <text x="60" y="148" fill="#475569" font-size="27">The agent control plane taking shape · Oct 2026</text>
+
+  <!-- Spine -->
+  <line x1="440" y1="330" x2="440" y2="1010" stroke="#94A3B8" stroke-width="4" stroke-dasharray="10 10"/>
+  <line x1="105" y1="270" x2="105" y2="1070" stroke="#BFDBFE" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Feedback loop path (drawn) -->
+  <path id="fbpath" d="M720 1070 H905 V590 H720" fill="none" stroke="#D97706" stroke-width="4" stroke-dasharray="10 10"/>
+  <polygon points="720,590 738,580 738,600" fill="#D97706"/>
+
+  <!-- Boxes -->
+  <g>
+    <rect class="box lit" style="animation-delay:0s" x="160" y="210" width="560" height="120" rx="18"/>
+    <circle cx="205" cy="270" r="22" fill="#2563EB"/><text class="n" x="205" y="278">1</text>
+    <text class="t" x="245" y="258">Agent asks to act</text>
+    <text class="s" x="245" y="292">e.g. "restart the prod database"</text>
+  </g>
+  <g>
+    <rect class="box lit" style="animation-delay:1s" x="160" y="370" width="560" height="120" rx="18"/>
+    <circle cx="205" cy="430" r="22" fill="#2563EB"/><text class="n" x="205" y="438">2</text>
+    <text class="t" x="245" y="410">Identity: who is this agent?</text>
+    <text class="s" x="245" y="442">ServiceNow AI Passport</text>
+    <text class="s" x="245" y="470">Microsoft Agent 365</text>
+  </g>
+  <g>
+    <rect class="box lit" style="animation-delay:2s" x="160" y="530" width="560" height="120" rx="18"/>
+    <rect class="fb" x="160" y="530" width="560" height="120" rx="18" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+    <circle cx="205" cy="590" r="22" fill="#2563EB"/><text class="n" x="205" y="598">3</text>
+    <text class="t" x="245" y="570">Policy: is it allowed?</text>
+    <text class="s" x="245" y="602">AI Control Tower rules + CMDB context:</text>
+    <text class="s" x="245" y="630">risk tolerance, permitted services</text>
+  </g>
+  <g>
+    <rect class="box lit" style="animation-delay:3s" x="160" y="690" width="560" height="120" rx="18"/>
+    <circle cx="205" cy="750" r="22" fill="#2563EB"/><text class="n" x="205" y="758">4</text>
+    <text class="t" x="245" y="730">Enforcement: allow or block</text>
+    <text class="s" x="245" y="762">NVIDIA runtime enforces the</text>
+    <text class="s" x="245" y="790">ServiceNow policy (Oct 21)</text>
+    <g class="verdict">
+      <rect x="596" y="750" width="108" height="42" rx="21" fill="#16A34A"/>
+      <text x="650" y="778" fill="#FFFFFF" font-size="21" font-weight="700" text-anchor="middle">ALLOW</text>
+    </g>
+  </g>
+  <g>
+    <rect class="box lit" style="animation-delay:4s" x="160" y="850" width="560" height="120" rx="18"/>
+    <circle cx="205" cy="910" r="22" fill="#2563EB"/><text class="n" x="205" y="918">5</text>
+    <text class="t" x="245" y="890">Tools: open standards</text>
+    <text class="s" x="245" y="922">MCP · A2A · Agent Skills, now all</text>
+    <text class="s" x="245" y="950">under the Agentic AI Foundation</text>
+  </g>
+  <g>
+    <rect class="box lit" style="animation-delay:5s" x="160" y="1010" width="560" height="120" rx="18"/>
+    <circle cx="205" cy="1070" r="22" fill="#2563EB"/><text class="n" x="205" y="1078">6</text>
+    <text class="t" x="245" y="1058">Action hits production</text>
+    <text class="s" x="245" y="1092">servers, cloud, data platforms</text>
+  </g>
+
+  <!-- Observability box on the loop -->
+  <g>
+    <rect class="box obs" x="780" y="720" width="250" height="230" rx="18"/>
+    <text x="905" y="764" fill="#0F172A" font-size="27" font-weight="700" text-anchor="middle">Observability</text>
+    <text x="905" y="798" fill="#475569" font-size="21" text-anchor="middle">what did it</text>
+    <text x="905" y="824" fill="#475569" font-size="21" text-anchor="middle">actually do?</text>
+    <text x="905" y="866" fill="#0F172A" font-size="21" font-weight="600" text-anchor="middle">Dynatrace</text>
+    <text x="905" y="894" fill="#0F172A" font-size="21" font-weight="600" text-anchor="middle">Datadog</text>
+    <text x="905" y="922" fill="#0F172A" font-size="21" font-weight="600" text-anchor="middle">New Relic</text>
+  </g>
+  <text x="812" y="548" fill="#B45309" font-size="20" font-weight="600" text-anchor="middle">traces feed back</text>
+  <text x="812" y="574" fill="#B45309" font-size="20" font-weight="600" text-anchor="middle">into policy</text>
+
+  <!-- Travelling token: down the spine (0-6s), then along the feedback loop (6-9s) -->
+  <circle r="14" fill="#2563EB">
+    <animateMotion dur="10s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.6;1" calcMode="linear" path="M105 270 V1070"/>
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="1;1;0;0" keyTimes="0;0.6;0.61;1"/>
+  </circle>
+  <circle r="14" fill="#D97706">
+    <animateMotion dur="10s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.6;0.9;1" calcMode="linear">
+      <mpath href="#fbpath"/>
+    </animateMotion>
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.6;0.61;0.9;0.91;1"/>
+  </circle>
+
+  <!-- Thesis + footer -->
+  <text x="540" y="1205" fill="#0F172A" font-size="36" font-weight="800" text-anchor="middle">Whoever owns the agent's identity</text>
+  <text x="540" y="1250" fill="#2563EB" font-size="36" font-weight="800" text-anchor="middle">owns the agent.</text>
+  <line x1="60" y1="1288" x2="1020" y2="1288" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="60" y="1322" fill="#0F172A" font-size="21" font-weight="700">Emerging Things · Rahul Adokar</text>
+  <text x="1020" y="1322" fill="#64748B" font-size="18" text-anchor="end">Sources: vendor announcements, Oct 21–30, 2026</text>
+</svg>

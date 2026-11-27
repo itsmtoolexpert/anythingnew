@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" font-family="Helvetica, Arial, sans-serif">
+<style>
+  .bg{fill:#FAF8F3}
+  .t{fill:#14161A}
+  .m{fill:#4A4F57}
+  .st{fill:#FFFFFF;stroke:#C9CDD3;stroke-width:2}
+  .bk{fill:#FFFFFF;stroke:#C9CDD3;stroke-width:2}
+  .rec{fill:#FFF4E5;stroke:#C2410C;stroke-width:3;stroke-dasharray:10 8}
+  .spine{stroke:#C9CDD3;stroke-width:4}
+  .link{stroke:#C2410C;stroke-width:3;stroke-dasharray:8 8;fill:none;opacity:.3}
+  .tok{fill:#1D4ED8}
+  @keyframes mv{0%{transform:translateY(0)}4%{transform:translateY(0)}12%{transform:translateY(146px)}16%{transform:translateY(146px)}24%{transform:translateY(292px)}28%{transform:translateY(292px)}36%{transform:translateY(438px)}40%{transform:translateY(438px)}48%{transform:translateY(584px)}100%{transform:translateY(584px)}}
+  #tok{animation:mv 10s ease-in-out infinite}
+  @keyframes s1{0%,1%{stroke:#C9CDD3;fill:#FFFFFF}2%,10%{stroke:#1D4ED8;fill:#EEF3FF}12%,100%{stroke:#C9CDD3;fill:#FFFFFF}}
+  @keyframes s2{0%,12%{stroke:#C9CDD3;fill:#FFFFFF}14%,22%{stroke:#1D4ED8;fill:#EEF3FF}24%,100%{stroke:#C9CDD3;fill:#FFFFFF}}
+  @keyframes s3{0%,24%{stroke:#C9CDD3;fill:#FFFFFF}26%,34%{stroke:#15803D;fill:#ECFDF3}36%,100%{stroke:#C9CDD3;fill:#FFFFFF}}
+  @keyframes s4{0%,36%{stroke:#C9CDD3;fill:#FFFFFF}38%,46%{stroke:#1D4ED8;fill:#EEF3FF}48%,100%{stroke:#C9CDD3;fill:#FFFFFF}}
+  @keyframes s5{0%,48%{stroke:#C9CDD3;fill:#FFFFFF}50%,96%{stroke:#C2410C;fill:#FFF4E5}100%{stroke:#C9CDD3;fill:#FFFFFF}}
+  #st1{animation:s1 10s linear infinite}
+  #st2{animation:s2 10s linear infinite}
+  #st3{animation:s3 10s linear infinite}
+  #st4{animation:s4 10s linear infinite}
+  #st5{animation:s5 10s linear infinite}
+  @keyframes b1{0%,58%{stroke:#C9CDD3;fill:#FFFFFF}60%,96%{stroke:#B91C1C;fill:#FEF2F2}100%{stroke:#C9CDD3;fill:#FFFFFF}}
+  @keyframes b2{0%,63%{stroke:#C9CDD3;fill:#FFFFFF}65%,96%{stroke:#B91C1C;fill:#FEF2F2}100%{stroke:#C9CDD3;fill:#FFFFFF}}
+  @keyframes b3{0%,68%{stroke:#C9CDD3;fill:#FFFFFF}70%,96%{stroke:#B91C1C;fill:#FEF2F2}100%{stroke:#C9CDD3;fill:#FFFFFF}}
+  #bk1{animation:b1 10s linear infinite}
+  #bk2{animation:b2 10s linear infinite}
+  #bk3{animation:b3 10s linear infinite}
+  @keyframes lk{0%,74%{opacity:.3;stroke-dashoffset:0}77%,96%{opacity:1;stroke-dashoffset:-64}100%{opacity:.3}}
+  .link{animation:lk 10s linear infinite}
+  @keyframes rb{0%,76%{fill:#FFF4E5}82%,95%{fill:#FFE4C7}100%{fill:#FFF4E5}}
+  .rec{animation:rb 10s linear infinite}
+  @keyframes q{0%,50%{opacity:0}54%,96%{opacity:1}100%{opacity:0}}
+  .q{animation:q 10s linear infinite;fill:#C2410C;font-weight:700}
+  @keyframes q2{0%,78%{opacity:0}82%,96%{opacity:1}100%{opacity:0}}
+  .q2{animation:q2 10s linear infinite;fill:#C2410C;font-weight:700}
+</style>
+<rect class="bg" width="1080" height="1350"/>
+<text class="t" x="50" y="100" font-size="50" font-weight="700">An agent’s fix is a change.</text>
+<text class="t" x="50" y="158" font-size="50" font-weight="700">Who can find it and undo it?</text>
+<text class="m" x="50" y="202" font-size="22">OpenAI + Cisco Shirudo and the Reuters bank report, both Nov 23, 2026</text>
+
+<text class="m" x="50" y="246" font-size="21" font-weight="700">THE AGENT-WRITTEN FIX (SHIRUDO, PRE-RELEASE)</text>
+<text class="m" x="680" y="246" font-size="21" font-weight="700">BANKS’ KILL SWITCH</text>
+
+<line class="spine" x1="80" y1="320" x2="80" y2="904"/>
+
+<rect id="st1" class="st" x="50" y="260" width="580" height="120" rx="14"/>
+<text class="t" x="110" y="308" font-size="26" font-weight="700">1 · Exploit disclosed</text>
+<text class="m" x="110" y="344" font-size="21">Patch needs testing and a restart: days or weeks</text>
+
+<rect id="st2" class="st" x="50" y="406" width="580" height="120" rx="14"/>
+<text class="t" x="110" y="454" font-size="26" font-weight="700">2 · Agent writes a shield</text>
+<text class="m" x="110" y="490" font-size="21">Codex generates a dynamic eBPF control</text>
+
+<rect id="st3" class="st" x="50" y="552" width="580" height="120" rx="14"/>
+<text class="t" x="110" y="600" font-size="26" font-weight="700">3 · Operator approves</text>
+<text class="m" x="110" y="636" font-size="21">Shield is signed and verified before it loads</text>
+
+<rect id="st4" class="st" x="50" y="698" width="580" height="120" rx="14"/>
+<text class="t" x="110" y="746" font-size="26" font-weight="700">4 · Shield runs in the kernel</text>
+<text class="m" x="110" y="782" font-size="21">Blocks the exploit on a live system, no restart</text>
+
+<rect id="st5" class="st" x="50" y="844" width="580" height="120" rx="14"/>
+<text class="t" x="110" y="892" font-size="26" font-weight="700">5 · Patch lands. Shield retired?</text>
+<text class="m" x="110" y="928" font-size="21">Who remembers it exists, and who removes it?</text>
+<text class="q" x="590" y="914" font-size="44" text-anchor="middle">?</text>
+
+<circle id="tok" class="tok" cx="80" cy="320" r="14"/>
+
+<rect id="bk1" class="bk" x="670" y="260" width="360" height="100" rx="14"/>
+<text class="t" x="690" y="302" font-size="23" font-weight="700">Disconnect the agent</text>
+<text class="m" x="690" y="334" font-size="20">from other systems</text>
+
+<rect id="bk2" class="bk" x="670" y="380" width="360" height="100" rx="14"/>
+<text class="t" x="690" y="422" font-size="23" font-weight="700">Identify the processes</text>
+<text class="m" x="690" y="454" font-size="20">the agent created</text>
+
+<rect id="bk3" class="bk" x="670" y="500" width="360" height="100" rx="14"/>
+<text class="t" x="690" y="542" font-size="23" font-weight="700">Limit access, cap</text>
+<text class="m" x="690" y="574" font-size="20">how long agents run</text>
+
+<path class="link" d="M630 612 C 660 640, 680 680, 700 700"/>
+<path class="link" d="M630 758 C 650 758, 670 760, 690 760"/>
+<path class="link" d="M630 904 C 660 880, 680 860, 700 840"/>
+<path class="link" d="M850 600 L 850 650"/>
+
+<rect class="rec" x="670" y="660" width="360" height="304" rx="16"/>
+<text class="t" x="850" y="712" font-size="25" font-weight="700" text-anchor="middle">Change record</text>
+<text class="m" x="850" y="748" font-size="21" text-anchor="middle">What did the agent</text>
+<text class="m" x="850" y="776" font-size="21" text-anchor="middle">create, who approved it,</text>
+<text class="m" x="850" y="804" font-size="21" text-anchor="middle">when does it come out?</text>
+<text class="t" x="850" y="860" font-size="22" font-weight="700" text-anchor="middle">ITSM change / CMDB</text>
+<text class="q2" x="850" y="920" font-size="30" text-anchor="middle">not wired in yet</text>
+
+<text class="t" x="50" y="1050" font-size="28" font-weight="700">Agents now ship fixes into production.</text>
+<text class="t" x="50" y="1092" font-size="28" font-weight="700">Without a change record, nobody can undo them.</text>
+<text class="m" x="50" y="1150" font-size="20">Sources: OpenAI/Cisco Shirudo (Nov 23; Help Net Security, Cybersecurity Dive);</text>
+<text class="m" x="50" y="1178" font-size="20">Reuters exclusive on US banks’ AI-agent controls (Nov 23). Banks were not named.</text>
+
+<line x1="50" y1="1260" x2="1030" y2="1260" stroke="#C9CDD3" stroke-width="2"/>
+<text class="m" x="50" y="1302" font-size="22">Emerging Things · Rahul Adokar</text>
+<text class="m" x="1030" y="1302" font-size="20" text-anchor="end">2026-11-24</text>
+</svg>

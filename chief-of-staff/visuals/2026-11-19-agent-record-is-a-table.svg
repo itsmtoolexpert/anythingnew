@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<style>
+  text{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#111827}
+  .t{font-size:52px;font-weight:800}
+  .st{font-size:26px;fill:#374151}
+  .h{font-size:28px;font-weight:700;fill:#fff}
+  .c{font-size:23px;font-family:Menlo,Consolas,monospace}
+  .s{font-size:20px;fill:#4b5563}
+  .b{font-size:24px;font-weight:700}
+  .ctl{font-size:21px}
+  .row{fill:#fff;stroke:#d1d5db;stroke-width:2}
+  .hlL{fill:#dbeafe;opacity:0;animation:hl 10s infinite}
+  .hlR{fill:#fde68a;opacity:0;animation:hl 10s infinite}
+  @keyframes hl{0%,100%{opacity:0}8%,30%{opacity:1}40%{opacity:0}}
+  .tokL{animation:mvL 10s infinite}
+  .tokR{animation:mvR 10s infinite}
+  @keyframes mvL{0%,30%{transform:translate(0,0);opacity:0}32%{opacity:1}55%{transform:translate(255px,210px);opacity:1}60%,100%{transform:translate(255px,210px);opacity:0}}
+  @keyframes mvR{0%,30%{transform:translate(0,0);opacity:0}32%{opacity:1}55%{transform:translate(-255px,210px);opacity:1}60%,100%{transform:translate(-255px,210px);opacity:0}}
+  .join{animation:jp 10s infinite;transform-origin:540px 770px}
+  @keyframes jp{0%,52%{transform:scale(1)}58%{transform:scale(1.12)}64%,100%{transform:scale(1)}}
+  .res{animation:rs 10s infinite}
+  @keyframes rs{0%,58%{opacity:.25}66%,95%{opacity:1}100%{opacity:.25}}
+  .ctlrow{opacity:.35;animation:cr 10s infinite}
+  @keyframes cr{0%,66%{opacity:.35}74%,95%{opacity:1}100%{opacity:.35}}
+</style>
+<rect width="1080" height="1350" fill="#f8fafc"/>
+<text x="60" y="110" class="t">The agent record is</text>
+<text x="60" y="172" class="t">becoming a table you own</text>
+<text x="60" y="222" class="st">Agent telemetry now lands in your data plane. Outcomes live in ITSM.</text>
+
+<!-- Left table -->
+<rect x="50" y="270" width="450" height="64" rx="12" fill="#1d4ed8"/>
+<text x="74" y="313" class="h">agent_events</text>
+<text x="74" y="364" class="s">Google BigQuery · customer-owned · Nov 13</text>
+<text x="74" y="390" class="s">Azure Monitor · OTel GenAI traces · Nov 17</text>
+<g>
+  <rect x="50" y="410" width="450" height="56" class="row"/><rect x="50" y="410" width="450" height="56" class="hlL" style="animation-delay:0s"/><text x="74" y="446" class="c">agent_id</text>
+  <rect x="50" y="466" width="450" height="56" class="row"/><rect x="50" y="466" width="450" height="56" class="hlL" style="animation-delay:.4s"/><text x="74" y="502" class="c">prompt · response</text>
+  <rect x="50" y="522" width="450" height="56" class="row"/><rect x="50" y="522" width="450" height="56" class="hlL" style="animation-delay:.8s"/><text x="74" y="558" class="c">tokens · latency</text>
+</g>
+<!-- Right table -->
+<rect x="580" y="270" width="450" height="64" rx="12" fill="#b45309"/>
+<text x="604" y="313" class="h">incident / change</text>
+<text x="604" y="364" class="s">ITSM record (ServiceNow, BMC Helix)</text>
+<text x="604" y="390" class="s">BMC: Agent Outcomes view (26.3)</text>
+<g>
+  <rect x="580" y="410" width="450" height="56" class="row"/><rect x="580" y="410" width="450" height="56" class="hlR" style="animation-delay:0s"/><text x="604" y="446" class="c">ticket_id</text>
+  <rect x="580" y="466" width="450" height="56" class="row"/><rect x="580" y="466" width="450" height="56" class="hlR" style="animation-delay:.4s"/><text x="604" y="502" class="c">agent_id  ← ?</text>
+  <rect x="580" y="522" width="450" height="56" class="row"/><rect x="580" y="522" width="450" height="56" class="hlR" style="animation-delay:.8s"/><text x="604" y="558" class="c">resolved · change ok</text>
+</g>
+<!-- connectors -->
+<path d="M275 580 L540 735" stroke="#93c5fd" stroke-width="4" stroke-dasharray="10 8" fill="none"/>
+<path d="M805 580 L540 735" stroke="#fcd34d" stroke-width="4" stroke-dasharray="10 8" fill="none"/>
+<circle class="tokL" cx="285" cy="560" r="14" fill="#1d4ed8"/>
+<circle class="tokR" cx="795" cy="560" r="14" fill="#b45309"/>
+<!-- join -->
+<g class="join">
+  <rect x="380" y="735" width="320" height="70" rx="35" fill="#111827"/>
+  <text x="540" y="781" class="b" text-anchor="middle" style="fill:#fff">JOIN ON agent_id</text>
+</g>
+<path d="M540 805 L540 850" stroke="#111827" stroke-width="4"/>
+<g class="res">
+  <rect x="190" y="850" width="700" height="96" rx="16" fill="#ecfdf5" stroke="#059669" stroke-width="3"/>
+  <text x="540" y="896" class="b" text-anchor="middle">= cost per resolved incident</text>
+  <text x="540" y="930" class="s" text-anchor="middle">a SQL query, once both sides carry the agent's identity</text>
+</g>
+<!-- controls -->
+<text x="60" y="1000" class="b">Controls already shipping on the telemetry side</text>
+<g class="ctlrow">
+  <circle cx="74" cy="1035" r="8" fill="#1d4ed8"/><text x="94" y="1042" class="ctl">Google: per-agent token quotas (preview) + byte-scan caps</text>
+  <circle cx="74" cy="1075" r="8" fill="#1d4ed8"/><text x="94" y="1082" class="ctl">Microsoft Agent 365: Cost Management by agent (preview)</text>
+  <circle cx="74" cy="1115" r="8" fill="#1d4ed8"/><text x="94" y="1122" class="ctl">Agent 365: see which agents depend on an MCP server (preview)</text>
+  <circle cx="74" cy="1155" r="8" fill="#b45309"/><text x="94" y="1162" class="ctl">ITSM side: no shipped join key in this week's releases</text>
+</g>
+<line x1="60" y1="1200" x2="1020" y2="1200" stroke="#d1d5db" stroke-width="2"/>
+<text x="60" y="1245" class="b">When the trace is a table, cost per outcome is a join.</text>
+<text x="60" y="1280" class="b">ITSM has to ship its half of the key.</text>
+<text x="60" y="1325" class="s">Emerging Things · Rahul Adokar</text>
+</svg>

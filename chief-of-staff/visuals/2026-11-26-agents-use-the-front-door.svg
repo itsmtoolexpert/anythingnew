@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" font-family="Helvetica, Arial, sans-serif">
+<style>
+  .bg{fill:#FAF8F3}
+  .t{fill:#14161A}
+  .m{fill:#4A4F57}
+  .lbl{fill:#6B7280;font-weight:700;letter-spacing:2px}
+  .node{fill:#FFFFFF;stroke:#C9CDD3;stroke-width:2}
+  .row{fill:#FFFFFF;stroke:#C9CDD3;stroke-width:2}
+  .spine{stroke:#C9CDD3;stroke-width:4}
+  .arr{stroke:#9CA3AF;stroke-width:4}
+  .tok{fill:#1D4ED8}
+  .reg{fill:#FFFFFF;stroke:#14161A;stroke-width:2}
+  .inv{fill:#FFF4E5;stroke:#C2410C;stroke-width:3;stroke-dasharray:10 8}
+  /* BEFORE lane: token runs left to right, then gets blocked */
+  @keyframes bt{0%{transform:translateX(0);opacity:1}18%{transform:translateX(360px);opacity:1}22%{transform:translateX(360px);opacity:0}100%{transform:translateX(360px);opacity:0}}
+  #btok{animation:bt 10s ease-in-out infinite}
+  @keyframes bx{0%,17%{opacity:0}20%,96%{opacity:1}100%{opacity:0}}
+  .bx{animation:bx 10s linear infinite}
+  /* AFTER spine: token stops at each gate */
+  @keyframes at{0%,24%{transform:translateY(0);opacity:0}26%{opacity:1}32%{transform:translateY(0)}38%,44%{transform:translateY(130px)}50%,56%{transform:translateY(260px)}62%,96%{transform:translateY(390px);opacity:1}100%{transform:translateY(390px);opacity:0}}
+  #atok{animation:at 10s ease-in-out infinite}
+  @keyframes g1{0%,30%{stroke:#C9CDD3;fill:#FFFFFF}32%,94%{stroke:#1D4ED8;fill:#EEF3FF}98%,100%{stroke:#C9CDD3;fill:#FFFFFF}}
+  @keyframes g2{0%,42%{stroke:#C9CDD3;fill:#FFFFFF}44%,94%{stroke:#7C3AED;fill:#F5F0FF}98%,100%{stroke:#C9CDD3;fill:#FFFFFF}}
+  @keyframes g3{0%,54%{stroke:#C9CDD3;fill:#FFFFFF}56%,94%{stroke:#15803D;fill:#ECFDF3}98%,100%{stroke:#C9CDD3;fill:#FFFFFF}}
+  @keyframes g4{0%,60%{stroke:#C9CDD3;fill:#FFFFFF}62%,94%{stroke:#14161A;fill:#F3F4F6}98%,100%{stroke:#C9CDD3;fill:#FFFFFF}}
+  #g1{animation:g1 10s linear infinite}
+  #g2{animation:g2 10s linear infinite}
+  #g3{animation:g3 10s linear infinite}
+  #g4{animation:g4 10s linear infinite}
+  @keyframes ck{0%{opacity:0}100%{opacity:1}}
+  @keyframes c1{0%,31%{opacity:0}33%,94%{opacity:1}98%,100%{opacity:0}}
+  @keyframes c2{0%,43%{opacity:0}45%,94%{opacity:1}98%,100%{opacity:0}}
+  @keyframes c3{0%,55%{opacity:0}57%,94%{opacity:1}98%,100%{opacity:0}}
+  .c1{animation:c1 10s linear infinite}
+  .c2{animation:c2 10s linear infinite}
+  .c3{animation:c3 10s linear infinite}
+  /* bottom: regulator boxes light, then inventory pulses with ? */
+  @keyframes rg{0%,64%{opacity:.35}68%,96%{opacity:1}100%{opacity:.35}}
+  .rg{animation:rg 10s linear infinite}
+  @keyframes iv{0%,72%{fill:#FFF4E5}76%,82%{fill:#FFD9B0}86%,90%{fill:#FFF4E5}92%,96%{fill:#FFD9B0}100%{fill:#FFF4E5}}
+  .inv{animation:iv 10s linear infinite}
+  @keyframes q{0%,72%{opacity:0}76%,96%{opacity:1}100%{opacity:0}}
+  .q{animation:q 10s linear infinite}
+  @keyframes dl{0%,66%{stroke-dashoffset:200;opacity:0}70%{opacity:1}78%,96%{stroke-dashoffset:0;opacity:1}100%{opacity:0}}
+  .dl{stroke:#C2410C;stroke-width:4;stroke-dasharray:12 8;animation:dl 10s linear infinite}
+</style>
+<rect class="bg" width="1080" height="1350"/>
+<text class="t" x="50" y="92" font-size="48" font-weight="700">Agents now have to use</text>
+<text class="t" x="50" y="148" font-size="48" font-weight="700">the front door.</text>
+<text class="m" x="50" y="190" font-size="22">Google Workspace: MCP servers + CLI GA Nov 24, 2026; agent rule enforced Feb 1, 2027</text>
+
+<!-- BEFORE -->
+<text class="lbl" x="50" y="245" font-size="20">TODAY</text>
+<rect class="node" x="50" y="262" width="230" height="92" rx="14"/>
+<text class="t" x="165" y="317" font-size="26" font-weight="700" text-anchor="middle">AI agent</text>
+<line class="arr" x1="280" y1="308" x2="400" y2="308"/>
+<rect class="node" x="400" y="262" width="270" height="92" rx="14"/>
+<text class="t" x="535" y="302" font-size="24" font-weight="700" text-anchor="middle">Workspace REST API</text>
+<text class="m" x="535" y="332" font-size="20" text-anchor="middle">looks like any app</text>
+<line class="arr" x1="670" y1="308" x2="790" y2="308"/>
+<rect class="node" x="790" y="262" width="240" height="92" rx="14"/>
+<text class="t" x="910" y="317" font-size="24" font-weight="700" text-anchor="middle">Gmail · Drive</text>
+<circle id="btok" class="tok" cx="340" cy="308" r="14"/>
+<g class="bx">
+  <line x1="705" y1="283" x2="755" y2="333" stroke="#B91C1C" stroke-width="7"/>
+  <line x1="755" y1="283" x2="705" y2="333" stroke="#B91C1C" stroke-width="7"/>
+  <text x="50" y="392" font-size="21" fill="#B91C1C" font-weight="700">From Feb 1, 2027, agents must use Workspace MCP servers or the CLI, not REST</text>
+</g>
+
+<!-- AFTER -->
+<text class="lbl" x="50" y="450" font-size="20">FROM FEB 1, 2027</text>
+<line class="spine" x1="90" y1="470" x2="90" y2="920"/>
+<circle id="atok" class="tok" cx="90" cy="525" r="16"/>
+
+<rect id="g1" class="row" x="130" y="470" width="900" height="110" rx="14"/>
+<text class="t" x="160" y="512" font-size="27" font-weight="700">1 · Declare: “this caller is an agent”</text>
+<text class="m" x="160" y="548" font-size="21">Dedicated OAuth client with “AI-powered agent” selected</text>
+<text class="c1" x="985" y="540" font-size="36" fill="#1D4ED8" font-weight="700">✓</text>
+
+<rect id="g2" class="row" x="130" y="600" width="900" height="110" rx="14"/>
+<text class="t" x="160" y="642" font-size="27" font-weight="700">2 · Door: Workspace MCP server or CLI</text>
+<text class="m" x="160" y="678" font-size="21">Standardized usage tiers; Scaled tier for heavier agent use</text>
+<text class="c2" x="985" y="670" font-size="36" fill="#7C3AED" font-weight="700">✓</text>
+
+<rect id="g3" class="row" x="130" y="730" width="900" height="110" rx="14"/>
+<text class="t" x="160" y="772" font-size="27" font-weight="700">3 · Confirm: a human says yes</text>
+<text class="m" x="160" y="808" font-size="21">Before sending email, changing Drive sharing, bulk edits</text>
+<text class="c3" x="985" y="800" font-size="36" fill="#15803D" font-weight="700">✓</text>
+
+<rect id="g4" class="row" x="130" y="860" width="900" height="80" rx="14"/>
+<text class="t" x="160" y="910" font-size="27" font-weight="700">Workspace data</text>
+
+<!-- WHO ANSWERS -->
+<text class="lbl" x="50" y="995" font-size="20">WHO ANSWERS FOR THE AGENT?</text>
+<g class="rg">
+  <rect class="reg" x="50" y="1012" width="470" height="150" rx="14"/>
+  <text class="t" x="74" y="1050" font-size="23" font-weight="700">UK FCA (Nov 24)</text>
+  <text class="m" x="74" y="1082" font-size="20">The regulated firm and its</text>
+  <text class="m" x="74" y="1108" font-size="20">senior managers, even when a</text>
+  <text class="m" x="74" y="1134" font-size="20">third party supplies the agent</text>
+</g>
+<line class="dl" x1="520" y1="1087" x2="560" y2="1087"/>
+<rect class="inv" x="560" y="1012" width="470" height="150" rx="14"/>
+<text class="t" x="584" y="1050" font-size="23" font-weight="700">Your agent inventory</text>
+<text class="m" x="584" y="1082" font-size="20">ITSM/CMDB: which OAuth clients</text>
+<text class="m" x="584" y="1108" font-size="20">are agents, who owns each one,</text>
+<text class="m" x="584" y="1134" font-size="20">what it may change</text>
+<text class="q" x="985" y="1060" font-size="44" fill="#C2410C" font-weight="700">?</text>
+
+<text class="t" x="50" y="1222" font-size="26" font-weight="700">The platform now knows which caller is an agent.</text>
+<text class="t" x="50" y="1258" font-size="26" font-weight="700">Your CMDB should know it first.</text>
+<line x1="50" y1="1286" x2="1030" y2="1286" stroke="#C9CDD3" stroke-width="2"/>
+<text class="m" x="50" y="1322" font-size="20">Emerging Things · Rahul Adokar</text>
+<text class="m" x="1030" y="1322" font-size="20" text-anchor="end">Sources: Google Workspace Updates; FCA</text>
+</svg>
